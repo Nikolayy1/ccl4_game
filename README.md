@@ -26,6 +26,9 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
   - Provide a temporary speed boost and regenerate health
 - Hazards/Obstacles reduce health or slow the player. 
 - When timer or HP runs out: game over.
+- 
+![mermaid-diagram-2025-06-10-185338](https://github.com/user-attachments/assets/3db948f2-0b2a-453f-bfdb-486968d1a61a)
+
 
 ## Key Features to Implement
 - 3-Lane Endless Runner: Automatic forward movement across left, center, right lanes
@@ -39,10 +42,11 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 - UI Elements: Timer bar, score counter, health (❤)
 
 ## System Design
-Starting screen (Scene 1) and a main scene, which implements the road generation, obstacle generation, and the NPC characters (serving as obstacles). 
-
-![mermaid-diagram-2025-06-10-185338](https://github.com/user-attachments/assets/3db948f2-0b2a-453f-bfdb-486968d1a61a)
-
+**Scenes & Flow**  
+- **Menu** → Play, Highscore, Credits 
+- **Game** (runs until timer ≤ 0 or health ≤ 0) → GameOver  
+- **GameOver** → Score display, Retry/Quit
+  
 ## System Infrastructure
 ![Class Diagram](https://github.com/user-attachments/assets/0aa2ba14-ef13-4e66-b1b8-e136088b4971)
 
