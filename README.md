@@ -37,7 +37,7 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 - Obstacles & Hazards: tires, chainsaw, stove, toilet, etc. Random junkyard stuff.
 - Robber Goblin (Obstacle): After every 25 Shiny Bits, dodge or get walloped, and taxed - 25% tax!
 - Masked Scavenger (Obstacle): Spawns after 5 Mushrooms. Breathes fire down the lane. Dodge or receive heavy damage.
-- Animation States: Idle, Running, Jumping, Damaged, Collision
+- Animation States: Idle, Running, Jumping, Damaged/Collision, Death
 - Audio Feedback: Background music, footsteps, pickups, damage, jumps, power-up, etc. via WWise
 - UI Elements: Timer bar, score counter, health (❤)
 
@@ -56,10 +56,10 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 ![grafik](https://github.com/user-attachments/assets/54361ea6-6e1e-4d2a-ba9e-20607618670f)
 Animations:
 - Idle
-- Running
+- Running 
 - Jumping
-- Death / Damage
-- Collision
+- Collision/Damage
+- Death 
 
 ### NPCs
 #### Robber NPC 
