@@ -27,6 +27,14 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 - Hazards/Obstacles reduce health or slow the player. 
 - When timer or HP runs out: game over.
 
+## System Design
+Starting screen (Scene 1) and a main scene which implements the road generation, obstacle generation and the NPC characters (serving as obstacles). 
+
+
+## System Infrastructure
+![Class Diagram](https://github.com/user-attachments/assets/0aa2ba14-ef13-4e66-b1b8-e136088b4971)
+
+
 ## Models and Mood
 ### Main Character - Goblin
 ![grafik](https://github.com/user-attachments/assets/54361ea6-6e1e-4d2a-ba9e-20607618670f)
