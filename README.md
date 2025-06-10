@@ -27,9 +27,21 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 - Hazards/Obstacles reduce health or slow the player. 
 - When timer or HP runs out: game over.
 
-## System Design
-Starting screen (Scene 1) and a main scene which implements the road generation, obstacle generation and the NPC characters (serving as obstacles). 
+## Key Features to Implement
+- 3-Lane Endless Runner: Automatic forward movement across left, center, right lanes
+- Shiny Bit Collection: Increases game timer & adds score
+- Mushrooms (Power-ups): Grants Speed Boost and Health Boost (❤ UI)
+- Obstacles & Hazards: tires, chainsaw, stove, toilet, etc. Random junkyard stuff.
+- Robber Goblin (Obstacle): After every 25 Shiny Bits, dodge or get walloped, and taxed - 25% tax!
+- Masked Scavenger (Obstacle): Spawns after 5 Mushrooms. Breathes fire down the lane. Dodge or receive heavy damage.
+- Animation States: Idle, Running, Jumping, Damaged, Collision
+- Audio Feedback: Background music, footsteps, pickups, damage, jumps, power-up, etc. via WWise
+- UI Elements: Timer bar, score counter, health (❤)
 
+## System Design
+Starting screen (Scene 1) and a main scene, which implements the road generation, obstacle generation, and the NPC characters (serving as obstacles). 
+
+![mermaid-diagram-2025-06-10-185338](https://github.com/user-attachments/assets/3db948f2-0b2a-453f-bfdb-486968d1a61a)
 
 ## System Infrastructure
 ![Class Diagram](https://github.com/user-attachments/assets/0aa2ba14-ef13-4e66-b1b8-e136088b4971)
@@ -43,14 +55,14 @@ Animations:
 - Running
 - Jumping
 - Death / Damage
+- Collision
 
 ### NPCs
-#### Thief/Robber 
+#### Robber NPC 
 ![grafik](https://github.com/user-attachments/assets/cc18f77e-a0a7-4cee-8267-0aca2617bbbf)
 
 #### Masked Scavenger
 ![grafik](https://github.com/user-attachments/assets/43112f8b-f4bf-4469-aeda-ba03c46d7736)
-
 
 
 
