@@ -26,7 +26,7 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
   - Provide a temporary speed boost and regenerate health
 - Hazards/Obstacles reduce health or slow the player. 
 - When timer or HP runs out: game over.
-- 
+
 ![mermaid-diagram-2025-06-10-185338](https://github.com/user-attachments/assets/3db948f2-0b2a-453f-bfdb-486968d1a61a)
 
 
