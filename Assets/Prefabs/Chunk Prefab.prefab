@@ -191,11 +191,11 @@ MonoBehaviour:
   coinPrefab: {fileID: 6208463163041641379, guid: 0975f39918bd9ed42bc3d308f486521d, type: 3}
   potionSpawnChance: 0.3
   coinSpawnChance: 0.5
+  coinSeperationLength: 2
   lanes:
-  - -2.5
+  - -3
   - 0
-  - 2.5
-  chunkLength: 10
+  - 3
 --- !u!1001 &1622845302393758464
 PrefabInstance:
   m_ObjectHideFlags: 0
