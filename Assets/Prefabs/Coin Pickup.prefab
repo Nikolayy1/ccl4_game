@@ -101,6 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435c33cb18f64c543af377f4ef522a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  scoreManager: {fileID: 0}
+  scorePerCoinValue: 10
 --- !u!1001 &1371743143804309425
 PrefabInstance:
   m_ObjectHideFlags: 0

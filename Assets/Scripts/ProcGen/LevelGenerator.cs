@@ -1,15 +1,26 @@
 using System.Collections.Generic;
 using Unity.VisualScripting.FullSerializer;
+using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject chunkPrefab;
-    [SerializeField] int startingChunksAmount = 12;
+    [Header("References")]
+    [SerializeField] CameraController cameraController; // Reference to the CameraController script
+    [SerializeField] GameObject[] chunkPrefabs;
     [SerializeField] Transform chunkParent; // Parent object for the chunks
+    [SerializeField] ScoreManager scoreManager; // Reference to the ScoreManager script
+
+    [Header("Level Settings")]
+    [Tooltip("The number of chunks to spawn at the start of the game.")]
+    [SerializeField] int startingChunksAmount = 12;
+    [Tooltip("Do not change chunkLength unless you also change the chunk prefab's length.")]
     [SerializeField] float chunkLength = 10f;
     [SerializeField] float moveSpeed = 8f;
     [SerializeField] float minMoveSpeed = 2f;
+    [SerializeField] float maxMoveSpeed = 20f;
+    [SerializeField] float minGravityZ = -22f;
+    [SerializeField] float maxGravityZ = -2f;
 
     List<GameObject> chunks = new List<GameObject>();
 
@@ -26,17 +37,26 @@ public class LevelGenerator : MonoBehaviour
 
     public void ChangeChunkMoveSpeed(float speedAmount)
     {
-        moveSpeed += speedAmount;
+        float newMoveSpeed = moveSpeed + speedAmount;
+        newMoveSpeed = Mathf.Clamp(newMoveSpeed, minMoveSpeed, maxMoveSpeed);
 
-        if (moveSpeed < minMoveSpeed)
+        if (newMoveSpeed != moveSpeed)
         {
-            moveSpeed = minMoveSpeed; // Ensure the speed does not go below the minimum, coming to an halt
+            moveSpeed = newMoveSpeed; // Ensure the speed does not go below the minimum, coming to an halt
+
+            float newGravityZ = Physics.gravity.z - speedAmount;
+            newGravityZ = Mathf.Clamp(newGravityZ, minGravityZ, maxGravityZ);
+
+            Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, newGravityZ);
+            // Dynamically adjust global gravity on the Z-axis based on speed changes.
+            // This keeps obstacles falling/moving consistently with the level’s forward speed.
+            // Increasing moveSpeed will decrease gravity.z (pulling obstacles faster forward),
+            // and decreasing moveSpeed will increase gravity.z (slowing them down).
+
+            cameraController.ChangeCameraFOV(speedAmount); // Adjust camera FOV based on speed changes
+            // This will zoom in or out based on the speedAmount, enhancing the gameplay experience.
         }
-        Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, Physics.gravity.z - speedAmount);
-        // Dynamically adjust global gravity on the Z-axis based on speed changes.
-        // This keeps obstacles falling/moving consistently with the level’s forward speed.
-        // Increasing moveSpeed will decrease gravity.z (pulling obstacles faster forward),
-        // and decreasing moveSpeed will increase gravity.z (slowing them down).
+
     }
 
     void SpawnStartingChunks()
@@ -52,9 +72,12 @@ public class LevelGenerator : MonoBehaviour
         float spawnPositionZ = CalculateSpawnPosZ();
 
         Vector3 chunkSpawnPosition = new Vector3(transform.position.x, transform.position.y, spawnPositionZ);
-        GameObject newChunk = Instantiate(chunkPrefab, chunkSpawnPosition, Quaternion.identity, chunkParent);
+        GameObject chunkToSpawn = chunkPrefabs[Random.Range(0, chunkPrefabs.Length)];
+        GameObject newChunkGO = Instantiate(chunkToSpawn, chunkSpawnPosition, Quaternion.identity, chunkParent);
 
-        chunks.Add(newChunk); // expands the list one item at a time.
+        chunks.Add(newChunkGO); // expands the list one item at a time.
+        Chunk newChunk = newChunkGO.GetComponent<Chunk>();
+        newChunk.Init(this, scoreManager);
     }
 
     float CalculateSpawnPosZ()

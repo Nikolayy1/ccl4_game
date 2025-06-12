@@ -8,10 +8,12 @@ public class Potion : Pickup
 
     LevelGenerator levelGenerator;
 
-    void Start()
+    // dependency injection, faster than FindObjectOfType<LevelGenerator>()
+    public void Init(LevelGenerator levelGenerator)
     {
-        levelGenerator = FindObjectOfType<LevelGenerator>();
+        this.levelGenerator = levelGenerator;
     }
+
     protected override void OnPickup()
     {
         levelGenerator.ChangeChunkMoveSpeed(manipulateMoveSpeedAmount);

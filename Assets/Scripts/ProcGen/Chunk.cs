@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Chunk : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Chunk : MonoBehaviour
 
     [SerializeField] float[] lanes = { -2.5f, 0f, 2.5f };   // X positions for the 3 lanes
 
+    LevelGenerator levelGenerator;
+    ScoreManager scoreManager;
+
     // Each index (0 = left, 1 = center, 2 = right) maps to an X position in `lanes`
     List<int> availableLanes = new List<int> { 0, 1, 2 };
 
@@ -21,6 +25,12 @@ public class Chunk : MonoBehaviour
         SpawnFences();   // May spawn 0–2 fences randomly on available lanes
         SpawnPotion();   // 30% chance to spawn a potion on a remaining free lane
         SpawnCoins();    // 50% chance to spawn 1–5 coins on a remaining lane, spaced in Z
+    }
+
+    public void Init(LevelGenerator levelGenerator, ScoreManager scoreManager)
+    {
+        this.levelGenerator = levelGenerator;
+        this.scoreManager = scoreManager;
     }
 
     void SpawnFences()
@@ -50,7 +60,8 @@ public class Chunk : MonoBehaviour
 
         int selectedLane = SelectLane();
         Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y, transform.position.z);
-        Instantiate(potionPrefab, spawnPosition, Quaternion.identity, this.transform);
+        Potion newPotion = Instantiate(potionPrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Potion>();
+        newPotion.Init(levelGenerator);
     }
 
     void SpawnCoins()
@@ -68,7 +79,8 @@ public class Chunk : MonoBehaviour
         {
             float spawnZ = topZ - (i * coinSeperationLength); // Step downward along Z
             Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y + 1f, spawnZ);
-            Instantiate(coinPrefab, spawnPosition, Quaternion.identity, this.transform);
+            Coin newCoin = Instantiate(coinPrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Coin>();
+            newCoin.Init(scoreManager); // Initialize the coin with the score manager
         }
     }
 

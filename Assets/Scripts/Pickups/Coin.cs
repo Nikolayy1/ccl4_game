@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Coin : Pickup
 {
+    [SerializeField] ScoreManager scoreManager;
+    [SerializeField] int scorePerCoinValue = 10;
+
+    public void Init(ScoreManager scoreManager)
+    {
+        this.scoreManager = scoreManager;
+    }
+
     protected override void OnPickup()
     {
-        // Logic for what happens when the coin is picked up
-        Debug.Log("Coin picked up!");
+        scoreManager.IncreaseScore(scorePerCoinValue);
     }
 }
