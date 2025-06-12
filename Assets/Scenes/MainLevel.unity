@@ -6222,6 +6222,11 @@ MonoBehaviour:
   cameraController: {fileID: 1104541812}
   chunkPrefabs:
   - {fileID: 7254450255618899248, guid: b60c65c63b0647548b0f10097a880517, type: 3}
+  - {fileID: 4387756905772975920, guid: 671ff81aeeaea1d47811e4338c7a5558, type: 3}
+  - {fileID: 4387756905772975920, guid: 34c326b801ea3ae41a42c73f3970871b, type: 3}
+  - {fileID: 7254450255618899248, guid: b60c65c63b0647548b0f10097a880517, type: 3}
+  - {fileID: 4387756905772975920, guid: eade7c5aa11e0cf4d863dada5849916a, type: 3}
+  - {fileID: 4387756905772975920, guid: d965a30bda985c549bcb5d1729eeb7a5, type: 3}
   chunkParent: {fileID: 306802611}
   scoreManager: {fileID: 105550796}
   startingChunksAmount: 12
@@ -6239,13 +6244,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724591734}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.006544932, y: 0, z: 0, w: 0.9999786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0.75, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1868202159
 GameObject:
   m_ObjectHideFlags: 0
