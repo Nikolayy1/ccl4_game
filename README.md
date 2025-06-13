@@ -41,7 +41,7 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 - Audio Feedback: Background music, footsteps, pickups, damage, jumps, power-up, etc. via WWise
 - UI Elements: Timer bar, score counter, health (❤)
 
-# Features Implemented as of 13.06.25
+### Features Implemented as of 13.06.25
 - Movement System, automatic forward movement across left, center, and right lanes
 - Obstacles & Hazards
 - Magic Mushroom Potion (Speed Boost, visualized with particle system)
