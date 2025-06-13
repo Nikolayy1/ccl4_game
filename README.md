@@ -25,7 +25,7 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 - Occasional Mushrooms appear:
   - Provide a temporary speed boost and regenerate health
 - Hazards/Obstacles reduce health or slow the player. 
-- When timer or HP runs out: game over.
+- When the timer or HP runs out: game over.
 
 ![mermaid-diagram-2025-06-10-185338](https://github.com/user-attachments/assets/3db948f2-0b2a-453f-bfdb-486968d1a61a)
 
@@ -33,13 +33,21 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 ## Key Features to Implement
 - 3-Lane Endless Runner: Automatic forward movement across left, center, right lanes
 - Shiny Bit Collection: Increases game timer & adds score
-- Mushrooms (Power-ups): Grants Speed Boost and Health Boost (❤ UI)
+- Magic Mushroom Potion (Power-ups): Grants Speed Boost and Health Boost (❤ UI)
 - Obstacles & Hazards: tires, chainsaw, stove, toilet, etc. Random junkyard stuff.
 - Robber Goblin (Obstacle): After every 25 Shiny Bits, dodge or get walloped, and taxed - 25% tax!
 - Masked Scavenger (Obstacle): Spawns after 5 Mushrooms. Breathes fire down the lane. Dodge or receive heavy damage.
-- Animation States: Idle, Running, Jumping, Damaged/Collision, Death
+- Animation States: Idle, Running, Jumping, Damaged/Collision, (Death?)
 - Audio Feedback: Background music, footsteps, pickups, damage, jumps, power-up, etc. via WWise
 - UI Elements: Timer bar, score counter, health (❤)
+
+# Features Implemented as of 13.06.25
+- Movement System, automatic forward movement across left, center, and right lanes
+- Obstacles & Hazards
+- Magic Mushroom Potion (Speed Boost, visualized with particle system)
+- Shiny Bits: collecting coins increases the score
+- (New) Checkpoints - every 8 chunks, a checkpoint appears that increases the timer by +5s
+- More to come...
 
 ## System Design
 **Scenes & Flow**  
