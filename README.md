@@ -13,9 +13,13 @@ Make sure to have editor version 2022.3.35f1!
 - start working ON DEV BRANCH (so use git checkout dev)
 - important commands: git fetch, git pull, git add ., git commit -m "commit message", git push
 
+---
+
 # Concept
 Fury Road is a fast-paced endless runner set in a grimy, post-collapse wasteland. The player takes control of a scrappy, hand-animated goblin sprinting down an unstable, debris-littered road. <br>
 The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame and extend your run.
+
+---
 
 ## Gameplay
 - The goblin runs forward automatically in a three-lane layout.
@@ -29,6 +33,7 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 
 ![mermaid-diagram-2025-06-10-185338](https://github.com/user-attachments/assets/3db948f2-0b2a-453f-bfdb-486968d1a61a)
 
+---
 
 ## Key Features to Implement
 - 3-Lane Endless Runner: Automatic forward movement across left, center, right lanes
@@ -49,15 +54,73 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 - (New) Checkpoints - every 8 chunks, a checkpoint appears that increases the timer by +5s
 - More to come...
 
+
 ## System Design
 **Scenes & Flow**  
 - **Menu** → Play, Highscore, Credits 
 - **Game** (runs until timer ≤ 0 or health ≤ 0) → GameOver  
 - **GameOver** → Score display, Retry/Quit
-  
-## System Infrastructure
-![Class Diagram](https://github.com/user-attachments/assets/0aa2ba14-ef13-4e66-b1b8-e136088b4971)
 
+
+## System Infrastructure
+
+The project structure is currently (13.06.25) divided into four main logic domains: **Player**, **Pickups**, **Procedural Generation**, and **Managers**. Below is a breakdown of the core scripts and their responsibilities.
+
+### Player Scripts
+
+- **`PlayerController.cs`**  
+  Handles movement (lane switching, forward motion), input, and animation logic.
+
+- **`CameraController.cs`**  
+  Smooth camera follow system with zoom/pan effects based on player speed.
+
+- **`PlayerCollisionHandler.cs`**  
+  Manages obstacle collisions, triggering appropriate game events or effects.
+
+
+### Pickups
+
+- **`Coin.cs`**  
+  Increases the player’s score (missing: and adds a small time bonus when collected).
+
+- **`Potion.cs`**  
+  Applies the Magic Mushroom Potion effect: temporary speed boost with cooldown handling (health boost to come)
+
+- **`Pickup.cs`**  
+  Abstract base class for all pickup objects; handles shared interaction logic.
+
+
+
+### Procedural Generation (ProcGen)
+
+- **`LevelGenerator.cs`**  
+  Spawns terrain chunks dynamically ahead of the player during the run.
+
+- **`Checkpoint.cs`**  
+  Handles checkpoint logic, time reward (+5s on contact).
+
+- **`Chunk.cs`**  
+  Defines each terrain chunk and its associated elements (obstacles, visuals).
+
+- **`ObstacleSpawner.cs`**  
+  Generates obstacles thrown at the player
+
+- **`ObstacleDestroyer.cs`**  
+  Destroys out-of-bounds obstacles to improve performance 
+
+
+### Managers
+
+- **`Game Manager.cs`**  
+  Controls the main game states: start, running, checkpoint reached, and game over.
+
+- **`ScoreManager.cs`**  
+  Tracks the player’s score and remaining time. Updates values in response to coin and potion pickups.
+
+
+![image](https://github.com/user-attachments/assets/86c00a06-4702-454f-8b00-5bfd02b0c611)
+
+---
 
 ## Models and Mood
 ### Main Character - Goblin
