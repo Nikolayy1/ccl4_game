@@ -8,12 +8,14 @@ public class LevelGenerator : MonoBehaviour
     [Header("References")]
     [SerializeField] CameraController cameraController; // Reference to the CameraController script
     [SerializeField] GameObject[] chunkPrefabs;
+    [SerializeField] GameObject checkPointChunkPrefab;
     [SerializeField] Transform chunkParent; // Parent object for the chunks
     [SerializeField] ScoreManager scoreManager; // Reference to the ScoreManager script
 
     [Header("Level Settings")]
     [Tooltip("The number of chunks to spawn at the start of the game.")]
     [SerializeField] int startingChunksAmount = 12;
+    [SerializeField] int checkPointChunkInterval = 8;
     [Tooltip("Do not change chunkLength unless you also change the chunk prefab's length.")]
     [SerializeField] float chunkLength = 10f;
     [SerializeField] float moveSpeed = 8f;
@@ -23,6 +25,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] float maxGravityZ = -2f;
 
     List<GameObject> chunks = new List<GameObject>();
+    int chunksSpawned = 0;
 
 
     void Start()
@@ -67,17 +70,33 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    private void SpawnChunkSingular()
+    private void SpawnChunkSingular() // the method that spawns a single chunk
     {
         float spawnPositionZ = CalculateSpawnPosZ();
-
         Vector3 chunkSpawnPosition = new Vector3(transform.position.x, transform.position.y, spawnPositionZ);
-        GameObject chunkToSpawn = chunkPrefabs[Random.Range(0, chunkPrefabs.Length)];
+        GameObject chunkToSpawn = ChooseChunkToSpawn();
         GameObject newChunkGO = Instantiate(chunkToSpawn, chunkSpawnPosition, Quaternion.identity, chunkParent);
-
         chunks.Add(newChunkGO); // expands the list one item at a time.
         Chunk newChunk = newChunkGO.GetComponent<Chunk>();
         newChunk.Init(this, scoreManager);
+        chunksSpawned++;
+    }
+
+    private GameObject ChooseChunkToSpawn()
+    {
+        GameObject chunkToSpawn;
+
+        // checkppoint only spawns at intervals & only after the first 8 (inteval) chunks spawned, not right at the start
+        if (chunksSpawned % checkPointChunkInterval == 0 && chunksSpawned != 0)
+        {
+            chunkToSpawn = checkPointChunkPrefab; // Spawn a checkpoint chunk at intervals
+        }
+        else
+        {
+            chunkToSpawn = chunkPrefabs[Random.Range(0, chunkPrefabs.Length)];
+        }
+
+        return chunkToSpawn;
     }
 
     float CalculateSpawnPosZ()

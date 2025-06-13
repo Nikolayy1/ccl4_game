@@ -321,7 +321,7 @@ MonoBehaviour:
   playerController: {fileID: 624350530}
   timeText: {fileID: 1978390865}
   gameOverText: {fileID: 1891570013}
-  startTime: 15
+  startTime: 100
 --- !u!1 &159440915
 GameObject:
   m_ObjectHideFlags: 0
@@ -6227,9 +6227,11 @@ MonoBehaviour:
   - {fileID: 7254450255618899248, guid: b60c65c63b0647548b0f10097a880517, type: 3}
   - {fileID: 4387756905772975920, guid: eade7c5aa11e0cf4d863dada5849916a, type: 3}
   - {fileID: 4387756905772975920, guid: d965a30bda985c549bcb5d1729eeb7a5, type: 3}
+  checkPointChunkPrefab: {fileID: 4387756905772975920, guid: 0d713ea62a4b81c45b4f788849657c83, type: 3}
   chunkParent: {fileID: 306802611}
   scoreManager: {fileID: 105550796}
   startingChunksAmount: 12
+  checkPointChunkInterval: 8
   chunkLength: 10
   moveSpeed: 8
   minMoveSpeed: 2
