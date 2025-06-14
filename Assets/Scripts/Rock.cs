@@ -9,7 +9,7 @@ public class Rock : MonoBehaviour
 
     CinemachineImpulseSource cinemachineImpulseSource;
 
-    float collisionTimer = 0f;
+    float collisionTimer = 1f;
 
     void Awake()
     {

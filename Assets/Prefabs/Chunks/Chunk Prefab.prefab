@@ -189,7 +189,7 @@ MonoBehaviour:
   fencePrefab: {fileID: 6297842970770166691, guid: 38e709942529f0a4b913c9f9ea0eafe6, type: 3}
   potionPrefab: {fileID: 4222040642567699969, guid: 7f0d6e18876efdf4499afe24677292b8, type: 3}
   coinPrefab: {fileID: 6208463163041641379, guid: 0975f39918bd9ed42bc3d308f486521d, type: 3}
-  potionSpawnChance: 0.3
+  potionSpawnChance: 0.25
   coinSpawnChance: 0.5
   coinSeperationLength: 2
   lanes:

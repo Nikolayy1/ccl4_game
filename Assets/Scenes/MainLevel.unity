@@ -321,7 +321,7 @@ MonoBehaviour:
   playerController: {fileID: 624350530}
   timeText: {fileID: 1978390865}
   gameOverText: {fileID: 1891570013}
-  startTime: 100
+  startTime: 30
 --- !u!1 &159440915
 GameObject:
   m_ObjectHideFlags: 0
@@ -15840,7 +15840,7 @@ MonoBehaviour:
   - {fileID: 3855555482310788206, guid: d4c2474444d769541a103641997f15d6, type: 3}
   - {fileID: 2299414379513665659, guid: 4f8be064ef387a749b37097d754878b6, type: 3}
   - {fileID: 5816987321555711648, guid: 8a4ff2ad2f5c4eb459196c732ca2d9c3, type: 3}
-  obstacleSpawnInterval: 2
+  obstacleSpawnTime: 3
   obstacleParent: {fileID: 306802611}
   spawnAreaWidth: 4
 --- !u!4 &1135038063
@@ -16180,17 +16180,18 @@ MonoBehaviour:
   - {fileID: 7254450255618899248, guid: b60c65c63b0647548b0f10097a880517, type: 3}
   - {fileID: 4387756905772975920, guid: eade7c5aa11e0cf4d863dada5849916a, type: 3}
   - {fileID: 4387756905772975920, guid: d965a30bda985c549bcb5d1729eeb7a5, type: 3}
+  - {fileID: 4387756905772975920, guid: a022089669cea704691f99fdaeec6802, type: 3}
   checkPointChunkPrefab: {fileID: 4387756905772975920, guid: 0d713ea62a4b81c45b4f788849657c83, type: 3}
   chunkParent: {fileID: 306802611}
   scoreManager: {fileID: 105550796}
   startingChunksAmount: 12
   checkPointChunkInterval: 8
   chunkLength: 10
-  moveSpeed: 8
+  moveSpeed: 6
   minMoveSpeed: 2
   maxMoveSpeed: 20
   minGravityZ: -22
-  maxGravityZ: -2
+  maxGravityZ: -8
 --- !u!4 &1724591736
 Transform:
   m_ObjectHideFlags: 0
