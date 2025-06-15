@@ -11,6 +11,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] GameObject checkPointChunkPrefab;
     [SerializeField] Transform chunkParent; // Parent object for the chunks
     [SerializeField] ScoreManager scoreManager; // Reference to the ScoreManager script
+    [SerializeField] GameManager gameManager;
 
     [Header("Level Settings")]
     [Tooltip("The number of chunks to spawn at the start of the game.")]
@@ -78,7 +79,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject newChunkGO = Instantiate(chunkToSpawn, chunkSpawnPosition, Quaternion.identity, chunkParent);
         chunks.Add(newChunkGO); // expands the list one item at a time.
         Chunk newChunk = newChunkGO.GetComponent<Chunk>();
-        newChunk.Init(this, scoreManager);
+        newChunk.Init(this, scoreManager, gameManager);
         chunksSpawned++;
     }
 

@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] ScoreManager scoreManager;
     [SerializeField] PlayerController playerController;
     [SerializeField] TMPro.TMP_Text timeText;
     [SerializeField] GameObject gameOverText;
+    [SerializeField] GameObject backToMenuButton;
     [SerializeField] float startTime = 15f; // Starting time in seconds
 
     float timeLeft;
@@ -50,8 +53,11 @@ public class GameManager : MonoBehaviour
         gameOver = true;
         playerController.enabled = false; // Disables player controls
         gameOverText.SetActive(true); //toggles the game over text visibility to active
+        backToMenuButton.SetActive(true); // Shows the button to return to the main menu
+        StateManager.Instance.SubmitScore(scoreManager.CurrentScore);
         Time.timeScale = .1f; // Pause the game
-        // Additional game over logic can be added here, such as showing final score or restarting options.
+                              // Additional game over logic can be added here, such as showing final score or restarting options.
+
     }
 
 }

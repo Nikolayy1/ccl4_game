@@ -16,6 +16,7 @@ public class Chunk : MonoBehaviour
 
     LevelGenerator levelGenerator;
     ScoreManager scoreManager;
+    GameManager gameManager;
 
     // Each index (0 = left, 1 = center, 2 = right) maps to an X position in `lanes`
     List<int> availableLanes = new List<int> { 0, 1, 2 };
@@ -27,10 +28,11 @@ public class Chunk : MonoBehaviour
         SpawnCoins();    // 50% chance to spawn 1–5 coins on a remaining lane, spaced in Z
     }
 
-    public void Init(LevelGenerator levelGenerator, ScoreManager scoreManager)
+    public void Init(LevelGenerator levelGenerator, ScoreManager scoreManager, GameManager gameManager)
     {
         this.levelGenerator = levelGenerator;
         this.scoreManager = scoreManager;
+        this.gameManager = gameManager;
     }
 
     void SpawnFences()
@@ -80,7 +82,7 @@ public class Chunk : MonoBehaviour
             float spawnZ = topZ - (i * coinSeperationLength); // Step downward along Z
             Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y + 1f, spawnZ);
             Coin newCoin = Instantiate(coinPrefab, spawnPosition, Quaternion.identity, this.transform).GetComponent<Coin>();
-            newCoin.Init(scoreManager); // Initialize the coin with the score manager
+            newCoin.Init(scoreManager, gameManager);  // Initialize the coin with the score manager
         }
     }
 

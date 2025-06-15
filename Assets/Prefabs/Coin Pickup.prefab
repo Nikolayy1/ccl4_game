@@ -103,7 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   scoreManager: {fileID: 0}
+  gameManager: {fileID: 0}
   scorePerCoinValue: 10
+  timeBoostPerCoin: 0.1
 --- !u!1001 &1371743143804309425
 PrefabInstance:
   m_ObjectHideFlags: 0
