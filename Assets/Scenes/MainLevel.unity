@@ -15989,6 +15989,7 @@ MonoBehaviour:
   - {fileID: 3855555482310788206, guid: d4c2474444d769541a103641997f15d6, type: 3}
   - {fileID: 2299414379513665659, guid: 4f8be064ef387a749b37097d754878b6, type: 3}
   - {fileID: 5816987321555711648, guid: 8a4ff2ad2f5c4eb459196c732ca2d9c3, type: 3}
+  - {fileID: 4759356826078896386, guid: d269ad6aa6e253a469b3952cac844e52, type: 3}
   obstacleSpawnTime: 3
   minObstacleSpawnTime: 0.5
   obstacleParent: {fileID: 306802611}

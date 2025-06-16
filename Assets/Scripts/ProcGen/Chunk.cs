@@ -86,6 +86,8 @@ public class Chunk : MonoBehaviour
         }
     }
 
+
+
     // Removes a lane from the list so it's not reused by other pickups
     int SelectLane()
     {
