@@ -16,6 +16,7 @@ public class Chunk : MonoBehaviour
     [SerializeField] float coinSpawnChance = 0.5f;         // 50% chance to spawn coins
     [SerializeField] float coinSeperationLength = 2f;      // Z spacing between coins
     [SerializeField] int robberSpawnThreshold = 250;
+    [SerializeField] int skipSpawnUntilChunk = 1;
 
     [SerializeField] float[] lanes = { -2.5f, 0f, 2.5f };   // X positions for the 3 lanes, now -3,0,3
 
@@ -27,22 +28,27 @@ public class Chunk : MonoBehaviour
     List<int> availableLanes = new List<int> { 0, 1, 2 };
 
     static int lastRobberScoreThreshold = 0;
+    private int chunkIndex = 0;
+
 
 
     void Start()
     {
+        if (chunkIndex < skipSpawnUntilChunk) return; // Skip spawning if this is one of the first two chunks
+
         SpawnFences();   // May spawn 0–2 fences randomly on available lanes
         SpawnPotion();   // 30% chance to spawn a potion on a remaining free lane
         SpawnCoins();    // 50% chance to spawn 1–5 coins on a remaining lane, spaced in Z
         SpawnBearTrap(); // 15 % chance to spawn bear trap on a free lane
     }
 
-    public void Init(LevelGenerator levelGenerator, ScoreManager scoreManager, GameManager gameManager)
+    public void Init(LevelGenerator levelGenerator, ScoreManager scoreManager, GameManager gameManager, int chunkIndex)
     {
         this.levelGenerator = levelGenerator;
         this.scoreManager = scoreManager;
         this.gameManager = gameManager;
         TrySpawnRobber();
+        this.chunkIndex = chunkIndex;
     }
 
     void SpawnFences()

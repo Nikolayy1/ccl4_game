@@ -337,7 +337,7 @@ MonoBehaviour:
   timeText: {fileID: 1978390865}
   gameOverText: {fileID: 1891570013}
   backToMenuButton: {fileID: 1052879366}
-  startTime: 30
+  startTime: 35
 --- !u!1 &159440915
 GameObject:
   m_ObjectHideFlags: 0

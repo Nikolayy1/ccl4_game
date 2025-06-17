@@ -81,7 +81,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject newChunkGO = Instantiate(chunkToSpawn, chunkSpawnPosition, Quaternion.identity, chunkParent);
         chunks.Add(newChunkGO); // expands the list one item at a time.
         Chunk newChunk = newChunkGO.GetComponent<Chunk>();
-        newChunk.Init(this, scoreManager, gameManager);
+        newChunk.Init(this, scoreManager, gameManager, chunksSpawned);
         chunksSpawned++;
     }
 
