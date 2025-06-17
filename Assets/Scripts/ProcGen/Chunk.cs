@@ -8,13 +8,16 @@ public class Chunk : MonoBehaviour
     [SerializeField] GameObject potionPrefab;
     [SerializeField] GameObject coinPrefab;
     [SerializeField] GameObject bearTrapPrefab;
+    [SerializeField] GameObject robberPrefab;
+
 
 
     [SerializeField] float potionSpawnChance = 0.3f;       // 30% chance to spawn a potion
     [SerializeField] float coinSpawnChance = 0.5f;         // 50% chance to spawn coins
     [SerializeField] float coinSeperationLength = 2f;      // Z spacing between coins
+    [SerializeField] int robberSpawnThreshold = 250;
 
-    [SerializeField] float[] lanes = { -2.5f, 0f, 2.5f };   // X positions for the 3 lanes
+    [SerializeField] float[] lanes = { -2.5f, 0f, 2.5f };   // X positions for the 3 lanes, now -3,0,3
 
     LevelGenerator levelGenerator;
     ScoreManager scoreManager;
@@ -22,6 +25,9 @@ public class Chunk : MonoBehaviour
 
     // Each index (0 = left, 1 = center, 2 = right) maps to an X position in `lanes`
     List<int> availableLanes = new List<int> { 0, 1, 2 };
+
+    static int lastRobberScoreThreshold = 0;
+
 
     void Start()
     {
@@ -36,6 +42,7 @@ public class Chunk : MonoBehaviour
         this.levelGenerator = levelGenerator;
         this.scoreManager = scoreManager;
         this.gameManager = gameManager;
+        TrySpawnRobber();
     }
 
     void SpawnFences()
@@ -96,6 +103,27 @@ public class Chunk : MonoBehaviour
         int selectedLane = SelectLane();
         Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y, transform.position.z);
         Instantiate(bearTrapPrefab, spawnPosition, Quaternion.identity, this.transform);
+    }
+
+    void SpawnRobber()
+    {
+        if (availableLanes.Count == 0) return;
+
+        int selectedLane = SelectLane();
+        Vector3 spawnPosition = new Vector3(lanes[selectedLane], transform.position.y, transform.position.z);
+        Instantiate(robberPrefab, spawnPosition, Quaternion.identity, this.transform);
+    }
+
+    void TrySpawnRobber()
+    {
+        if (scoreManager != null &&
+            scoreManager.GetScore() >= robberSpawnThreshold * (lastRobberScoreThreshold + 1) &&
+            availableLanes.Count > 0)
+        {
+            Debug.Log(">> Robber spawn condition met.");
+            SpawnRobber();
+            lastRobberScoreThreshold++;
+        }
     }
 
     // Removes a lane from the list so it's not reused by other pickups

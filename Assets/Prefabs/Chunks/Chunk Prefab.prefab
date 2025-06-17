@@ -190,9 +190,11 @@ MonoBehaviour:
   potionPrefab: {fileID: 4222040642567699969, guid: 7f0d6e18876efdf4499afe24677292b8, type: 3}
   coinPrefab: {fileID: 6208463163041641379, guid: 0975f39918bd9ed42bc3d308f486521d, type: 3}
   bearTrapPrefab: {fileID: 6297842970770166691, guid: d278a6adc42aa2f409174c43308efddb, type: 3}
+  robberPrefab: {fileID: 3261182117693004777, guid: fce3cb8453779a04d88c1eb2e9d274dd, type: 3}
   potionSpawnChance: 0.2
   coinSpawnChance: 0.5
   coinSeperationLength: 2
+  robberSpawnThreshold: 250
   lanes:
   - -3
   - 0

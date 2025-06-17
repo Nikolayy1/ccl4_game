@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
         {
             float baseSpeed = 8f; // Match your LevelGenerator's default
             speedMultiplier = levelGenerator.GetMoveSpeed() / baseSpeed;
+
         }
 
         Vector3 newPosition = currentPosition + moveDirection * (moveSpeed * speedMultiplier * Time.fixedDeltaTime);
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
 
     public void LockMovement(float duration)
     {
+        Debug.Log(">> LockMovement called by: " + duration + "s");
         StartCoroutine(TrapLockCoroutine(duration));
     }
 
