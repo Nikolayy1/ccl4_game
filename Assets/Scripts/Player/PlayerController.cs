@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,12 +10,18 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movement;
     Rigidbody rigidBody;
+    LevelGenerator levelGenerator;
 
     private bool isTrapped = false;
 
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody>();
+    }
+
+    void Start()
+    {
+        levelGenerator = FindObjectOfType<LevelGenerator>();
     }
 
     void FixedUpdate()
@@ -43,10 +46,18 @@ public class PlayerController : MonoBehaviour
         if (isTrapped) return;
 
         Vector3 currentPosition = rigidBody.position;
-        Vector3 moveDirection = new Vector3(movement.x, 0f, movement.y); // current postion
-        Vector3 newPosition = currentPosition + moveDirection * (moveSpeed * Time.fixedDeltaTime);
+        Vector3 moveDirection = new Vector3(movement.x, 0f, movement.y);
 
-        // Clamp (restrict) the player movement within the specified bounds
+        float speedMultiplier = 1f;
+
+        if (levelGenerator != null)
+        {
+            float baseSpeed = 8f; // Match your LevelGenerator's default
+            speedMultiplier = levelGenerator.GetMoveSpeed() / baseSpeed;
+        }
+
+        Vector3 newPosition = currentPosition + moveDirection * (moveSpeed * speedMultiplier * Time.fixedDeltaTime);
+
         newPosition.x = Mathf.Clamp(newPosition.x, -xClamp, xClamp);
         newPosition.z = Mathf.Clamp(newPosition.z, -zClamp, zClamp);
 
@@ -63,7 +74,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(">> Player movement LOCKED");
 
         isTrapped = true;
-        movement = Vector2.zero; // Immediately stop moving
+        movement = Vector2.zero;
 
         yield return new WaitForSeconds(duration);
 

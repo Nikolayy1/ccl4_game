@@ -10467,7 +10467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  xClamp: 3
+  xClamp: 3.5
   zClamp: 2
 --- !u!54 &624350531
 Rigidbody:

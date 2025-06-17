@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5579898900016502006}
   trapDuration: 3
-  speedPenalty: -2
+  speedPenalty: -3
 --- !u!1 &7113576771769247965
 GameObject:
   m_ObjectHideFlags: 0

@@ -152,5 +152,10 @@ public class LevelGenerator : MonoBehaviour
         yield return new WaitForSeconds(duration);
         isPaused = false;
     }
+
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
+    }
 }
 

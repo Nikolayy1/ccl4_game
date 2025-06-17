@@ -8,7 +8,7 @@ public class Coin : Pickup
     [SerializeField] ScoreManager scoreManager;
     [SerializeField] GameManager gameManager;
     [SerializeField] int scorePerCoinValue = 10;
-    [SerializeField] float timeBoostPerCoin = .5f;
+    [SerializeField] float timeBoostPerCoin = 1f;
 
     public void Init(ScoreManager scoreManager, GameManager gameManager)
     {
