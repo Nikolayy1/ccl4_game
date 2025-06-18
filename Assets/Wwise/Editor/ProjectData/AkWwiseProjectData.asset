@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 87f0ebfb7fdf3345be912b1ffb3c1007
     GuidInternal: 
-    m_lastTime: -8584513753721762936
-    List: []
+    m_lastTime: -8584513728552649580
+    List:
+    - name: MainSoundBank
+      guid: 9ceb3dc424d4994498b45d59122714fb
+      id: 534561221
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 87f0ebfb7fdf3345be912b1ffb3c1007
+      - ElementName: MainSoundBank
+        ObjectType: 7
+        guid: 9ceb3dc424d4994498b45d59122714fb
+      Path: SoundBanks\Default Work Unit\MainSoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,59 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a24af5ef6c102e4c9d82af68e09ec446
     GuidInternal: 
-    m_lastTime: -8584513753722089531
-    List: []
+    m_lastTime: -8584513720006759180
+    List:
+    - name: Play_chainsaw
+      guid: e3a03e3439aa804fab2d3fea7ac288d4
+      id: 4142890516
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_chainsaw
+        ObjectType: 3
+        guid: e3a03e3439aa804fab2d3fea7ac288d4
+      Path: Events\Default Work Unit\Play_chainsaw
+      maxAttenuation: 40
+      maxDuration: 7.0403543
+      minDuration: 7.0403543
+    - name: Play_Facing_Your_Nemesis
+      guid: 66987fe8be775748b1fe9d5a68c01ce7
+      id: 1786139419
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_Facing_Your_Nemesis
+        ObjectType: 3
+        guid: 66987fe8be775748b1fe9d5a68c01ce7
+      Path: Events\Default Work Unit\Play_Facing_Your_Nemesis
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_metal_crash
+      guid: 3a7a1056cd25b04fa91fd95b4feda841
+      id: 1557486083
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_metal_crash
+        ObjectType: 3
+        guid: 3a7a1056cd25b04fa91fd95b4feda841
+      Path: Events\Default Work Unit\Play_metal_crash
+      maxAttenuation: 40
+      maxDuration: 1.6586603
+      minDuration: 1.6586603
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +204,7 @@ MonoBehaviour:
     m_lastTime: -8584513753721929786
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000000c0000000d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

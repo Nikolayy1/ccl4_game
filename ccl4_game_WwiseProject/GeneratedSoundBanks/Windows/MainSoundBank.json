@@ -1,0 +1,91 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "534561221",
+    "Type": "User",
+    "GUID": "{C43DEB9C-D424-4499-98B4-5D59122714FB}",
+    "Language": "SFX",
+    "Hash": "{696C87B4-7AB6-BA82-488B-EFDC097D9A05}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainSoundBank",
+    "ShortName": "MainSoundBank",
+    "Path": "MainSoundBank.bnk",
+    "Media": [
+     {
+      "Id": "661411155",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "metal_crash.wav",
+      "CachePath": "5E/{5E894526-5F2E-DBAA-BE28-50D27D2B5E9A}.wem"
+     },
+     {
+      "Id": "709455778",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Facing_Your_Nemesis.wav",
+      "CachePath": "25/{2547DC96-15E0-84DA-5D4C-DA8C0B015E3E}.wem"
+     },
+     {
+      "Id": "914248540",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "chainsaw.wav",
+      "CachePath": "5A/{5A83E69F-CDC9-8AB3-A240-3507613A099A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4142890516",
+      "Name": "Play_chainsaw",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_chainsaw",
+      "GUID": "{343EA0E3-AA39-4F80-AB2D-3FEA7AC288D4}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "7.0403543",
+      "DurationMax": "7.0403543",
+      "MediaRefs": [
+       {
+        "Id": "914248540"
+       }
+      ]
+     },
+     {
+      "Id": "1786139419",
+      "Name": "Play_Facing_Your_Nemesis",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Facing_Your_Nemesis",
+      "GUID": "{E87F9866-77BE-4857-B1FE-9D5A68C01CE7}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "709455778"
+       }
+      ]
+     },
+     {
+      "Id": "1557486083",
+      "Name": "Play_metal_crash",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_metal_crash",
+      "GUID": "{56107A3A-25CD-4FB0-A91F-D95B4FEDA841}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6586603",
+      "DurationMax": "1.6586603",
+      "MediaRefs": [
+       {
+        "Id": "661411155"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DCD74A92-0045-41CD-2607-C9A966D149E1}"
+ }
+}

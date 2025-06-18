@@ -1,6 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}" SchemaVersion="123">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="chainsaw" ID="{A6E7EC4C-0A0D-4A48-8962-B476AB222F16}" ShortID="410785180">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="obstacle_att" ID="{468BF922-2596-44B9-8C55-CDECA8C82D0E}" WorkUnitID="{532769EF-9D76-4A0A-8DAE-7DBD8596D937}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{910F89A1-6A63-42B5-9AD0-3A8F26B554DC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A1A4FC2F-FC67-4626-8AE0-C52953C3A12E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="chainsaw" ID="{5CBACC22-0641-480C-9D6E-162A7A3A499E}">
+							<Language>SFX</Language>
+							<AudioFile>chainsaw.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="914248540"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="chainsaw" ID="{5CBACC22-0641-480C-9D6E-162A7A3A499E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Facing_Your_Nemesis" ID="{FF1E5AB0-B991-4EB1-98F2-949E117CF297}" ShortID="444714270">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{910F89A1-6A63-42B5-9AD0-3A8F26B554DC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A1A4FC2F-FC67-4626-8AE0-C52953C3A12E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Facing_Your_Nemesis" ID="{CB799844-E01A-4BAC-A66D-8DC56C405AF1}">
+							<Language>SFX</Language>
+							<AudioFile>Facing_Your_Nemesis.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="709455778"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Facing_Your_Nemesis" ID="{CB799844-E01A-4BAC-A66D-8DC56C405AF1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="metal_crash" ID="{9513EDA6-5988-40EC-B0F6-B42B263ABCE9}" ShortID="926469956">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="obstacle_att" ID="{468BF922-2596-44B9-8C55-CDECA8C82D0E}" WorkUnitID="{532769EF-9D76-4A0A-8DAE-7DBD8596D937}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{910F89A1-6A63-42B5-9AD0-3A8F26B554DC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A1A4FC2F-FC67-4626-8AE0-C52953C3A12E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="metal_crash" ID="{57085DB5-DA7C-4919-97F8-A62EF9B490F8}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.458778319340224"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="1.40280293798261"/>
+								<Property Name="TrimEnd" Type="Real64" Value="3.06146317564587"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>metal_crash.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="661411155"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="metal_crash" ID="{57085DB5-DA7C-4919-97F8-A62EF9B490F8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

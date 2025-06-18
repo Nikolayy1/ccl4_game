@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1557486083	Play_metal_crash			\Default Work Unit\Play_metal_crash	
+	1786139419	Play_Facing_Your_Nemesis			\Default Work Unit\Play_Facing_Your_Nemesis	
+	4142890516	Play_chainsaw			\Default Work Unit\Play_chainsaw	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	661411155	metal_crash	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\5E\{5E894526-5F2E-DBAA-BE28-50D27D2B5E9A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\metal_crash		292684
+	709455778	Facing_Your_Nemesis	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\25\{2547DC96-15E0-84DA-5D4C-DA8C0B015E3E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Facing_Your_Nemesis		43048032
+	914248540	chainsaw	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\5A\{5A83E69F-CDC9-8AB3-A240-3507613A099A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\chainsaw		1351844
+

@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{EFF54AA2-106C-4C2E-9D82-AF68E09EC446}" SchemaVersion="123">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{EFF54AA2-106C-4C2E-9D82-AF68E09EC446}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{EFF54AA2-106C-4C2E-9D82-AF68E09EC446}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_chainsaw" ID="{343EA0E3-AA39-4F80-AB2D-3FEA7AC288D4}">
+					<ChildrenList>
+						<Action Name="" ID="{8BAC63F5-A334-49D0-8D29-70D6DB3759BA}" ShortID="264410983">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="chainsaw" ID="{A6E7EC4C-0A0D-4A48-8962-B476AB222F16}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Facing_Your_Nemesis" ID="{E87F9866-77BE-4857-B1FE-9D5A68C01CE7}">
+					<ChildrenList>
+						<Action Name="" ID="{5D0C3B03-3BF2-4D1D-9C79-F05B9179B17F}" ShortID="388901949">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Facing_Your_Nemesis" ID="{FF1E5AB0-B991-4EB1-98F2-949E117CF297}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_metal_crash" ID="{56107A3A-25CD-4FB0-A91F-D95B4FEDA841}">
+					<ChildrenList>
+						<Action Name="" ID="{1E774DC9-B640-4EB1-85FD-B2DDF0BC636E}" ShortID="99379526">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="metal_crash" ID="{9513EDA6-5988-40EC-B0F6-B42B263ABCE9}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
