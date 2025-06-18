@@ -146,6 +146,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_goblin_eat" ID="{B7B5D2FE-578C-4047-ACB8-7523EFD8220E}">
+					<ChildrenList>
+						<Action Name="" ID="{BD99AA0F-F8ED-49E5-A0E9-4DCCF2095AB4}" ShortID="1032735905">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="goblin_eat" ID="{CCFC8911-18BC-4384-B4B1-E9F7B618D079}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_fire_breath" ID="{81EC676A-217D-4465-B4A7-49FD4C0D489E}">
+					<ChildrenList>
+						<Action Name="" ID="{A903C84B-D13D-4537-BAA6-A3B3B3207BDC}" ShortID="798136773">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fire_breath" ID="{D7CFE9B0-FD2F-42A6-BD48-BADAAA264174}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_robber" ID="{9EFD4D2F-E941-4FAA-A5BB-8435C6879E69}">
+					<ChildrenList>
+						<Action Name="" ID="{C63F39D9-B708-4AA9-A2E1-E82B11546C68}" ShortID="620118930">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="robber" ID="{283F7775-70B0-478C-A76A-AC3012A02400}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

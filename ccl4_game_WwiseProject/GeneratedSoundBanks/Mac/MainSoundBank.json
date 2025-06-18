@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{C43DEB9C-D424-4499-98B4-5D59122714FB}",
     "Language": "SFX",
-    "Hash": "{5BEB5426-79CE-2BC2-AE06-7F83D56F35FA}",
+    "Hash": "{DB5FD2C1-B0E2-90FE-88CB-A62E5086FD72}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainSoundBank",
     "ShortName": "MainSoundBank",
     "Path": "MainSoundBank.bnk",
@@ -38,6 +38,14 @@
       "Location": "Memory",
       "ShortName": "coin_collect_uncut.wav",
       "CachePath": "DD/{DDBC197F-5286-7A63-0CE0-6CA2C9F67520}.wem"
+     },
+     {
+      "Id": "287287040",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fire_breath.wav",
+      "CachePath": "2A/{2A3F18BA-F977-5D0C-D9FD-5F77EABC703D}.wem"
      },
      {
       "Id": "324396594",
@@ -118,6 +126,22 @@
       "Location": "Memory",
       "ShortName": "chainsaw.wav",
       "CachePath": "5A/{5A83E69F-CDC9-8AB3-A240-3507613A099A}.wem"
+     },
+     {
+      "Id": "1036550998",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "goblin_eat.wav",
+      "CachePath": "E3/{E3ECFB18-6708-0398-288A-F68B6F575E06}.wem"
+     },
+     {
+      "Id": "1040128361",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "robber.wav",
+      "CachePath": "1E/{1E69A368-2E60-BB45-1118-12F81DE6CCE1}.wem"
      }
     ],
     "Events": [
@@ -252,6 +276,34 @@
       ]
      },
      {
+      "Id": "2858965315",
+      "Name": "Play_fire_breath",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_fire_breath",
+      "GUID": "{81EC676A-217D-4465-B4A7-49FD4C0D489E}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.57899",
+      "DurationMax": "1.57899",
+      "MediaRefs": [
+       {
+        "Id": "287287040"
+       }
+      ]
+     },
+     {
+      "Id": "4170521540",
+      "Name": "Play_goblin_eat",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_goblin_eat",
+      "GUID": "{B7B5D2FE-578C-4047-ACB8-7523EFD8220E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.25219956",
+      "DurationMax": "0.25219956",
+      "MediaRefs": [
+       {
+        "Id": "1036550998"
+       }
+      ]
+     },
+     {
       "Id": "2512266768",
       "Name": "Play_goblin_stumble",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_goblin_stumble",
@@ -277,6 +329,20 @@
       "MediaRefs": [
        {
         "Id": "661411155"
+       }
+      ]
+     },
+     {
+      "Id": "2587316710",
+      "Name": "Play_robber",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_robber",
+      "GUID": "{9EFD4D2F-E941-4FAA-A5BB-8435C6879E69}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5730388",
+      "DurationMax": "1.5730388",
+      "MediaRefs": [
+       {
+        "Id": "1040128361"
        }
       ]
      },
@@ -311,6 +377,6 @@
     ]
    }
   ],
-  "FileHash": "{883534CB-872E-D150-FEE3-0D8C23FC9FCB}"
+  "FileHash": "{72D40A5D-A9B4-5DF9-5F94-D545C4E81D38}"
  }
 }

@@ -22,8 +22,11 @@ namespace AK
         static const AkUniqueID PLAY_CHAINSAW = 4142890516U;
         static const AkUniqueID PLAY_COIN_COLLECT = 4196543958U;
         static const AkUniqueID PLAY_FACING_YOUR_NEMESIS = 1786139419U;
+        static const AkUniqueID PLAY_FIRE_BREATH = 2858965315U;
+        static const AkUniqueID PLAY_GOBLIN_EAT = 4170521540U;
         static const AkUniqueID PLAY_GOBLIN_STUMBLE = 2512266768U;
         static const AkUniqueID PLAY_METAL_CRASH = 1557486083U;
+        static const AkUniqueID PLAY_ROBBER = 2587316710U;
         static const AkUniqueID PLAY_STOVE = 2568488193U;
         static const AkUniqueID PLAY_TOILET = 1059076725U;
     } // namespace EVENTS
