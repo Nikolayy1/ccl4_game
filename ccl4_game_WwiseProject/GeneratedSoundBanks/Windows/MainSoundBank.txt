@@ -5,9 +5,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	1786139419	Play_Facing_Your_Nemesis			\Default Work Unit\Play_Facing_Your_Nemesis	
 	2512266768	Play_goblin_stumble			\Default Work Unit\Play_goblin_stumble	
 	4142890516	Play_chainsaw			\Default Work Unit\Play_chainsaw	
+	4196543958	Play_coin_collect			\Default Work Unit\Play_coin_collect	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	201437110	barrel	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\88\{88BD5B14-7C1B-22FC-1BBF-085FE912BCFC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\barrel		59672
+	256492698	coin_collect	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\DD\{DDBC197F-5286-7A63-0CE0-6CA2C9F67520}.wem		\Actor-Mixer Hierarchy\Default Work Unit\coin_collect		68224
 	365875068	goblin_stumble	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\66\{66716096-0ED8-9838-FC0B-40C656A9D800}.wem		\Actor-Mixer Hierarchy\Default Work Unit\goblin_stumble		123696
 	607970589	Boulder Smash	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\B4\{B46A0B8F-940D-AB47-0661-35993BCE53DC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boulder Smash		240448
 	661411155	metal_crash	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\2A\{2A07096A-C775-934B-C43E-F98412194025}.wem		\Actor-Mixer Hierarchy\Default Work Unit\metal_crash		135496

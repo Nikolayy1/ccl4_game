@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a24af5ef6c102e4c9d82af68e09ec446
     GuidInternal: 
-    m_lastTime: -8584513693478724195
+    m_lastTime: -8584513674692543594
     List:
+    - name: Play_barrel
+      guid: 17917d166587814e804a4fef2405c625
+      id: 1408915754
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_barrel
+        ObjectType: 3
+        guid: 17917d166587814e804a4fef2405c625
+      Path: Events\Default Work Unit\Play_barrel
+      maxAttenuation: 40
+      maxDuration: 0.6205773
+      minDuration: 0.6205773
     - name: Play_Boulder_Smash
       guid: 792f0682c5568444bf44306bf00b5cf3
       id: 219250592
@@ -130,6 +147,23 @@ MonoBehaviour:
       maxAttenuation: 40
       maxDuration: 7.0403543
       minDuration: 7.0403543
+    - name: Play_coin_collect
+      guid: 68192fb3a24d824882ead1d7f6a70f45
+      id: 4196543958
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_coin_collect
+        ObjectType: 3
+        guid: 68192fb3a24d824882ead1d7f6a70f45
+      Path: Events\Default Work Unit\Play_coin_collect
+      maxAttenuation: 0
+      maxDuration: 0.38621587
+      minDuration: 0.38621587
     - name: Play_Facing_Your_Nemesis
       guid: 66987fe8be775748b1fe9d5a68c01ce7
       id: 1786139419
@@ -147,6 +181,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_goblin_stumble
+      guid: 7db01f4883f9054c973c686c6d7c42cc
+      id: 2512266768
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_goblin_stumble
+        ObjectType: 3
+        guid: 7db01f4883f9054c973c686c6d7c42cc
+      Path: Events\Default Work Unit\Play_goblin_stumble
+      maxAttenuation: 0
+      maxDuration: 0.6064654
+      minDuration: 0.6064654
     - name: Play_metal_crash
       guid: 3a7a1056cd25b04fa91fd95b4feda841
       id: 1557486083
@@ -221,7 +272,7 @@ MonoBehaviour:
     m_lastTime: -8584513753721929786
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000c0000000d0000009000000091000000cc000000cd000000
+  ExpandedWaapiItemIds: 0500000006000000070000000c0000000d00000053000000540000009000000091000000cc000000cd000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -5,6 +5,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] float collisionCooldown = 1f;
     [SerializeField] float manipulateMoveSpeedAmount = -2f;
+    [SerializeField] AK.Wwise.Event hitSoundEvent;
 
     const string hitString = "Hit";
 
@@ -29,5 +30,6 @@ public class PlayerCollisionHandler : MonoBehaviour
         levelGenerator.ChangeChunkMoveSpeed(manipulateMoveSpeedAmount);
         animator.SetTrigger(hitString);
         cooldownTimer = 0f; // Reset cooldown timer, so no multiple hits in a short time
+        hitSoundEvent?.Post(gameObject);
     }
 }

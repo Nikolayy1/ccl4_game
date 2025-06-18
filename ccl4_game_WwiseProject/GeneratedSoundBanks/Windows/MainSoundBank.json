@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{C43DEB9C-D424-4499-98B4-5D59122714FB}",
     "Language": "SFX",
-    "Hash": "{2886A52B-F58F-F001-A707-2B18D58301AB}",
+    "Hash": "{E8FFA7DC-37D9-8902-3807-45F82749B5CB}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainSoundBank",
     "ShortName": "MainSoundBank",
     "Path": "MainSoundBank.bnk",
@@ -22,6 +22,14 @@
       "Location": "Memory",
       "ShortName": "barrel.wav",
       "CachePath": "88/{88BD5B14-7C1B-22FC-1BBF-085FE912BCFC}.wem"
+     },
+     {
+      "Id": "256492698",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "coin_collect_uncut.wav",
+      "CachePath": "DD/{DDBC197F-5286-7A63-0CE0-6CA2C9F67520}.wem"
      },
      {
       "Id": "365875068",
@@ -111,6 +119,20 @@
       ]
      },
      {
+      "Id": "4196543958",
+      "Name": "Play_coin_collect",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_coin_collect",
+      "GUID": "{B32F1968-4DA2-4882-82EA-D1D7F6A70F45}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.38621587",
+      "DurationMax": "0.38621587",
+      "MediaRefs": [
+       {
+        "Id": "256492698"
+       }
+      ]
+     },
+     {
       "Id": "1786139419",
       "Name": "Play_Facing_Your_Nemesis",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Facing_Your_Nemesis",
@@ -154,6 +176,6 @@
     ]
    }
   ],
-  "FileHash": "{553470D8-0EEC-E9E0-2B32-2AE504E986D4}"
+  "FileHash": "{C42040CF-7A55-826F-21FA-1C3893ED48A5}"
  }
 }

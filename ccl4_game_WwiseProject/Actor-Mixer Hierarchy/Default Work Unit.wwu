@@ -6,6 +6,11 @@
 				<Sound Name="chainsaw" ID="{A6E7EC4C-0A0D-4A48-8962-B476AB222F16}" ShortID="410785180">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-18</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -34,6 +39,11 @@
 				<Sound Name="Facing_Your_Nemesis" ID="{FF1E5AB0-B991-4EB1-98F2-949E117CF297}" ShortID="444714270">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-16</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -45,6 +55,11 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Facing_Your_Nemesis" ID="{CB799844-E01A-4BAC-A66D-8DC56C405AF1}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="6.66417984782642"/>
+								<Property Name="TrimEnd" Type="Real64" Value="241.179841289707"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Facing_Your_Nemesis.wav</AudioFile>
 							<MediaIDList>
@@ -61,7 +76,7 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-20</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -79,10 +94,11 @@
 					<ChildrenList>
 						<AudioFileSource Name="metal_crash" ID="{57085DB5-DA7C-4919-97F8-A62EF9B490F8}">
 							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.639642849080119"/>
 								<Property Name="FadeOutDuration" Type="Real64" Value="0.458778319340224"/>
 								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 								<Property Name="TrimBegin" Type="Real64" Value="1.40280293798261"/>
-								<Property Name="TrimEnd" Type="Real64" Value="3.06146317564587"/>
+								<Property Name="TrimEnd" Type="Real64" Value="2.17037451692736"/>
 							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>metal_crash.wav</AudioFile>
@@ -98,6 +114,11 @@
 				<Sound Name="Boulder Smash" ID="{FF88540A-616E-46CF-AC2B-0CF1B86E0EF2}" ShortID="578975262">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -121,6 +142,122 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Boulder Smash" ID="{AB030681-C814-49DC-933D-43FE2224E8AA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="barrel" ID="{C92FB480-9A00-4C0F-BAA4-95ACCDE58684}" ShortID="1043594752">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="OutputBusVolume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="obstacle_att" ID="{468BF922-2596-44B9-8C55-CDECA8C82D0E}" WorkUnitID="{532769EF-9D76-4A0A-8DAE-7DBD8596D937}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{910F89A1-6A63-42B5-9AD0-3A8F26B554DC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A1A4FC2F-FC67-4626-8AE0-C52953C3A12E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="barrel" ID="{7FF8D991-1DCB-4BD9-9DB4-5C4CA27B9D1D}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.374486375072068"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.230041630401413"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.850618891732125"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>barrel.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="201437110"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="barrel" ID="{7FF8D991-1DCB-4BD9-9DB4-5C4CA27B9D1D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="goblin_stumble" ID="{6E5B888E-994E-40E2-825A-C3828C8C7DBC}" ShortID="292660343">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>250</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{910F89A1-6A63-42B5-9AD0-3A8F26B554DC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A1A4FC2F-FC67-4626-8AE0-C52953C3A12E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="goblin_stumble" ID="{65639D0B-5AE8-4CED-AA83-33247696E826}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.171374109228504"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.10846462609399"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.466397892204156"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.16707936848885"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>goblin_stumble.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="365875068"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="goblin_stumble" ID="{65639D0B-5AE8-4CED-AA83-33247696E826}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="coin_collect" ID="{C23DF4D7-A2B5-4459-B5C9-8F6504B04EC7}" ShortID="382567710">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>27</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{910F89A1-6A63-42B5-9AD0-3A8F26B554DC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A1A4FC2F-FC67-4626-8AE0-C52953C3A12E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="coin_collect_uncut" ID="{1DA19071-13A2-47D0-A410-807256AF0342}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.233231627331028"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.12103469943785"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="4.20546163849154"/>
+								<Property Name="TrimEnd" Type="Real64" Value="4.59167750325097"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>coin_collect_uncut.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="256492698"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="coin_collect_uncut" ID="{1DA19071-13A2-47D0-A410-807256AF0342}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
