@@ -8,6 +8,9 @@ public class BearTrap : MonoBehaviour
     [SerializeField] private float trapDuration = 3f;
     [SerializeField] private float speedPenalty = -3f;
 
+    [Header("Audio")]
+    [SerializeField] private AK.Wwise.Event snapSound; // ← Wwise audio for trap snap
+
     private const string PlayerTag = "Player";
     private bool hasSnapped = false;
     private LevelGenerator levelGenerator;
@@ -24,7 +27,12 @@ public class BearTrap : MonoBehaviour
         if (hasSnapped || !other.CompareTag(PlayerTag)) return;
 
         hasSnapped = true;
+
+        // Play snap animation
         animator.SetTrigger("Snap");
+
+        // Play Wwise snap sound
+        snapSound?.Post(gameObject);
 
         PlayerController player = other.GetComponent<PlayerController>();
         if (player != null)
