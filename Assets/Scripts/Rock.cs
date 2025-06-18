@@ -6,13 +6,13 @@ public class Rock : MonoBehaviour
     [Header("FX")]
     [SerializeField] float shakeModifier = 10f;
     [SerializeField] ParticleSystem collisionParticleSystem;
-    [SerializeField] AudioSource collisionSound;
+    [SerializeField] AK.Wwise.Event collisionSound;
 
     [Header("Gameplay")]
     [SerializeField] public float speedPenalty = -5f;
 
     CinemachineImpulseSource cinemachineImpulseSource;
-    float collisionTimer = 1f;
+    [SerializeField] float collisionTimer = 1f;
 
     void Awake()
     {
@@ -55,6 +55,6 @@ public class Rock : MonoBehaviour
         ContactPoint contactPoint = other.GetContact(0);
         collisionParticleSystem.transform.position = contactPoint.point;
         collisionParticleSystem.Play();
-        collisionSound.Play();
+        collisionSound?.Post(gameObject);
     }
 }

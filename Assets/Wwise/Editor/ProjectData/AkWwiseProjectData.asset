@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a24af5ef6c102e4c9d82af68e09ec446
     GuidInternal: 
-    m_lastTime: -8584513720006759180
+    m_lastTime: -8584513693478724195
     List:
+    - name: Play_Boulder_Smash
+      guid: 792f0682c5568444bf44306bf00b5cf3
+      id: 219250592
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_Boulder_Smash
+        ObjectType: 3
+        guid: 792f0682c5568444bf44306bf00b5cf3
+      Path: Events\Default Work Unit\Play_Boulder_Smash
+      maxAttenuation: 40
+      maxDuration: 1.2518333
+      minDuration: 1.2518333
     - name: Play_chainsaw
       guid: e3a03e3439aa804fab2d3fea7ac288d4
       id: 4142890516
@@ -145,8 +162,8 @@ MonoBehaviour:
         guid: 3a7a1056cd25b04fa91fd95b4feda841
       Path: Events\Default Work Unit\Play_metal_crash
       maxAttenuation: 40
-      maxDuration: 1.6586603
-      minDuration: 1.6586603
+      maxDuration: 0.76757157
+      minDuration: 0.76757157
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -204,7 +221,7 @@ MonoBehaviour:
     m_lastTime: -8584513753721929786
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000c0000000d000000
+  ExpandedWaapiItemIds: 0500000006000000070000000c0000000d0000009000000091000000cc000000cd000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

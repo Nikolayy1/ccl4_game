@@ -36,6 +36,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Boulder_Smash" ID="{82062F79-56C5-4484-BF44-306BF00B5CF3}">
+					<ChildrenList>
+						<Action Name="" ID="{ECE1001A-2E7B-4AA1-8D15-660F337BF757}" ShortID="492687240">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boulder Smash" ID="{FF88540A-616E-46CF-AC2B-0CF1B86E0EF2}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

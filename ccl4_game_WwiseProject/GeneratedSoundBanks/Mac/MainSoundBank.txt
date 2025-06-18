@@ -1,10 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
+	219250592	Play_Boulder_Smash			\Default Work Unit\Play_Boulder_Smash	
+	1408915754	Play_barrel			\Default Work Unit\Play_barrel	
 	1557486083	Play_metal_crash			\Default Work Unit\Play_metal_crash	
 	1786139419	Play_Facing_Your_Nemesis			\Default Work Unit\Play_Facing_Your_Nemesis	
+	2512266768	Play_goblin_stumble			\Default Work Unit\Play_goblin_stumble	
 	4142890516	Play_chainsaw			\Default Work Unit\Play_chainsaw	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	661411155	metal_crash	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\5E\{5E894526-5F2E-DBAA-BE28-50D27D2B5E9A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\metal_crash		292684
-	709455778	Facing_Your_Nemesis	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\25\{2547DC96-15E0-84DA-5D4C-DA8C0B015E3E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Facing_Your_Nemesis		43048032
+	201437110	barrel	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\88\{88BD5B14-7C1B-22FC-1BBF-085FE912BCFC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\barrel		59672
+	365875068	goblin_stumble	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\66\{66716096-0ED8-9838-FC0B-40C656A9D800}.wem		\Actor-Mixer Hierarchy\Default Work Unit\goblin_stumble		123696
+	607970589	Boulder Smash	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\B4\{B46A0B8F-940D-AB47-0661-35993BCE53DC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boulder Smash		240448
+	661411155	metal_crash	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\2A\{2A07096A-C775-934B-C43E-F98412194025}.wem		\Actor-Mixer Hierarchy\Default Work Unit\metal_crash		135496
+	709455778	Facing_Your_Nemesis	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\1C\{1CB2E787-60D2-829D-1816-469CE163A33F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Facing_Your_Nemesis		41368660
 	914248540	chainsaw	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\5A\{5A83E69F-CDC9-8AB3-A240-3507613A099A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\chainsaw		1351844
 

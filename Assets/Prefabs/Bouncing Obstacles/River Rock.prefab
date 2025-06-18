@@ -5063,7 +5063,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeModifier: 10
   collisionParticleSystem: {fileID: 6141412292684252524}
-  collisionSound: {fileID: 6244404677520362489}
+  collisionSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3e2dc4d544cf81244acd1bbe34067186, type: 2}
+  speedPenalty: -5
+  collisionTimer: 1
 --- !u!114 &815835277929706913
 MonoBehaviour:
   m_ObjectHideFlags: 0

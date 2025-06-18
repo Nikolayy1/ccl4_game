@@ -10,18 +10,42 @@
     "Type": "User",
     "GUID": "{C43DEB9C-D424-4499-98B4-5D59122714FB}",
     "Language": "SFX",
-    "Hash": "{696C87B4-7AB6-BA82-488B-EFDC097D9A05}",
+    "Hash": "{2886A52B-F58F-F001-A707-2B18D58301AB}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainSoundBank",
     "ShortName": "MainSoundBank",
     "Path": "MainSoundBank.bnk",
     "Media": [
+     {
+      "Id": "201437110",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "barrel.wav",
+      "CachePath": "88/{88BD5B14-7C1B-22FC-1BBF-085FE912BCFC}.wem"
+     },
+     {
+      "Id": "365875068",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "goblin_stumble.wav",
+      "CachePath": "66/{66716096-0ED8-9838-FC0B-40C656A9D800}.wem"
+     },
+     {
+      "Id": "607970589",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Boulder Smash.wav",
+      "CachePath": "B4/{B46A0B8F-940D-AB47-0661-35993BCE53DC}.wem"
+     },
      {
       "Id": "661411155",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "metal_crash.wav",
-      "CachePath": "5E/{5E894526-5F2E-DBAA-BE28-50D27D2B5E9A}.wem"
+      "CachePath": "2A/{2A07096A-C775-934B-C43E-F98412194025}.wem"
      },
      {
       "Id": "709455778",
@@ -29,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Facing_Your_Nemesis.wav",
-      "CachePath": "25/{2547DC96-15E0-84DA-5D4C-DA8C0B015E3E}.wem"
+      "CachePath": "1C/{1CB2E787-60D2-829D-1816-469CE163A33F}.wem"
      },
      {
       "Id": "914248540",
@@ -41,6 +65,36 @@
      }
     ],
     "Events": [
+     {
+      "Id": "1408915754",
+      "Name": "Play_barrel",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_barrel",
+      "GUID": "{167D9117-8765-4E81-804A-4FEF2405C625}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6205773",
+      "DurationMax": "0.6205773",
+      "MediaRefs": [
+       {
+        "Id": "201437110"
+       }
+      ]
+     },
+     {
+      "Id": "219250592",
+      "Name": "Play_Boulder_Smash",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Boulder_Smash",
+      "GUID": "{82062F79-56C5-4484-BF44-306BF00B5CF3}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2518333",
+      "DurationMax": "1.2518333",
+      "MediaRefs": [
+       {
+        "Id": "607970589"
+       }
+      ]
+     },
      {
       "Id": "4142890516",
       "Name": "Play_chainsaw",
@@ -69,14 +123,28 @@
       ]
      },
      {
+      "Id": "2512266768",
+      "Name": "Play_goblin_stumble",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_goblin_stumble",
+      "GUID": "{481FB07D-F983-4C05-973C-686C6D7C42CC}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6064654",
+      "DurationMax": "0.6064654",
+      "MediaRefs": [
+       {
+        "Id": "365875068"
+       }
+      ]
+     },
+     {
       "Id": "1557486083",
       "Name": "Play_metal_crash",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_metal_crash",
       "GUID": "{56107A3A-25CD-4FB0-A91F-D95B4FEDA841}",
       "MaxAttenuation": "40",
       "DurationType": "OneShot",
-      "DurationMin": "1.6586603",
-      "DurationMax": "1.6586603",
+      "DurationMin": "0.76757157",
+      "DurationMax": "0.76757157",
       "MediaRefs": [
        {
         "Id": "661411155"
@@ -86,6 +154,6 @@
     ]
    }
   ],
-  "FileHash": "{FFD79336-02AF-A090-4E59-01A201B99BE9}"
+  "FileHash": "{F6867C06-08AB-8EFF-66D7-590D160979AF}"
  }
 }

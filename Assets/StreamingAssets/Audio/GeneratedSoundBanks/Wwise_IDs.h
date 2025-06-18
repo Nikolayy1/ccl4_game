@@ -13,8 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BARREL = 1408915754U;
+        static const AkUniqueID PLAY_BOULDER_SMASH = 219250592U;
         static const AkUniqueID PLAY_CHAINSAW = 4142890516U;
         static const AkUniqueID PLAY_FACING_YOUR_NEMESIS = 1786139419U;
+        static const AkUniqueID PLAY_GOBLIN_STUMBLE = 2512266768U;
         static const AkUniqueID PLAY_METAL_CRASH = 1557486083U;
     } // namespace EVENTS
 
