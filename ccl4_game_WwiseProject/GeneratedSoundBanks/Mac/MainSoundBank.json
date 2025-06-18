@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{C43DEB9C-D424-4499-98B4-5D59122714FB}",
     "Language": "SFX",
-    "Hash": "{DB5FD2C1-B0E2-90FE-88CB-A62E5086FD72}",
+    "Hash": "{AE5224FA-5116-3FF4-198E-6C0D4F27B2BF}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainSoundBank",
     "ShortName": "MainSoundBank",
     "Path": "MainSoundBank.bnk",
@@ -21,7 +21,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "cage.wav",
-      "CachePath": "DA/{DAEA3597-1A1E-4B27-87D3-D932CA209174}.wem"
+      "CachePath": "FE/{FEE7236F-6C72-1AF9-8823-FF0F4CC09452}.wem"
      },
      {
       "Id": "201437110",
@@ -29,7 +29,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "barrel.wav",
-      "CachePath": "88/{88BD5B14-7C1B-22FC-1BBF-085FE912BCFC}.wem"
+      "CachePath": "B9/{B94C2F34-D7B1-AEF2-25EC-BAA1FD9E54BA}.wem"
      },
      {
       "Id": "256492698",
@@ -37,7 +37,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "coin_collect_uncut.wav",
-      "CachePath": "DD/{DDBC197F-5286-7A63-0CE0-6CA2C9F67520}.wem"
+      "CachePath": "1E/{1E50C488-B62A-CDD4-6909-DE896D1A7166}.wem"
      },
      {
       "Id": "287287040",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "fire_breath.wav",
-      "CachePath": "2A/{2A3F18BA-F977-5D0C-D9FD-5F77EABC703D}.wem"
+      "CachePath": "11/{116BA16B-1C6E-A7C8-6EB3-163C54BA21C8}.wem"
      },
      {
       "Id": "324396594",
@@ -53,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "toilet.wav",
-      "CachePath": "52/{52AB2A9F-48C7-DA84-078E-C814674998F0}.wem"
+      "CachePath": "20/{20031252-C9E9-CCD7-382D-FA0AE0780005}.wem"
      },
      {
       "Id": "365875068",
@@ -61,7 +61,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "goblin_stumble.wav",
-      "CachePath": "66/{66716096-0ED8-9838-FC0B-40C656A9D800}.wem"
+      "CachePath": "CA/{CA4F0E7F-419C-13DE-3A45-79EDDB9A5C71}.wem"
      },
      {
       "Id": "607970589",
@@ -77,7 +77,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "bear_trap.wav",
-      "CachePath": "3B/{3B6E38F9-16D1-8B26-F843-BE07DF3894B0}.wem"
+      "CachePath": "B9/{B9EB0401-7CA3-9768-74F1-544CDA30BD2F}.wem"
      },
      {
       "Id": "637275036",
@@ -85,7 +85,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "anvil(pitchitdown).wav",
-      "CachePath": "EF/{EF1C4A13-86E9-9F3F-8F6A-A016D5CA3A00}.wem"
+      "CachePath": "27/{27F36369-7FB5-1F5C-2AF9-E593C1BE5ED7}.wem"
      },
      {
       "Id": "661411155",
@@ -93,7 +93,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "metal_crash.wav",
-      "CachePath": "2A/{2A07096A-C775-934B-C43E-F98412194025}.wem"
+      "CachePath": "0D/{0D108D28-B81D-602F-4652-F89EEA35E4FD}.wem"
      },
      {
       "Id": "709455778",
@@ -101,7 +101,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Facing_Your_Nemesis.wav",
-      "CachePath": "1C/{1CB2E787-60D2-829D-1816-469CE163A33F}.wem"
+      "CachePath": "EA/{EA072A80-0E98-DB88-9F62-392B9414D773}.wem"
      },
      {
       "Id": "770572895",
@@ -109,7 +109,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "stove.wav",
-      "CachePath": "2E/{2E992DC9-524C-CC84-BA32-19B20F51314E}.wem"
+      "CachePath": "14/{140E649C-EBC0-E52A-9F29-C954EB58005E}.wem"
      },
      {
       "Id": "852864816",
@@ -117,7 +117,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "augustus.wav",
-      "CachePath": "A0/{A0D00317-22FA-6560-C1A2-F63ED80CCF56}.wem"
+      "CachePath": "56/{56E4E0E1-8900-8FCD-0CD9-E9CE348AE765}.wem"
      },
      {
       "Id": "914248540",
@@ -141,7 +141,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "robber.wav",
-      "CachePath": "1E/{1E69A368-2E60-BB45-1118-12F81DE6CCE1}.wem"
+      "CachePath": "61/{610DCFE6-5E9C-9006-24BB-B171282B949C}.wem"
      }
     ],
     "Events": [
@@ -226,8 +226,8 @@
       "GUID": "{6FB42488-155E-4532-A055-E91629B62049}",
       "MaxAttenuation": "40",
       "DurationType": "OneShot",
-      "DurationMin": "1.0387326",
-      "DurationMax": "1.0387326",
+      "DurationMin": "0.76480174",
+      "DurationMax": "0.76480174",
       "MediaRefs": [
        {
         "Id": "94536348"
@@ -324,8 +324,8 @@
       "GUID": "{56107A3A-25CD-4FB0-A91F-D95B4FEDA841}",
       "MaxAttenuation": "40",
       "DurationType": "OneShot",
-      "DurationMin": "0.76757157",
-      "DurationMax": "0.76757157",
+      "DurationMin": "0.4977086",
+      "DurationMax": "0.4977086",
       "MediaRefs": [
        {
         "Id": "661411155"
@@ -377,6 +377,6 @@
     ]
    }
   ],
-  "FileHash": "{72D40A5D-A9B4-5DF9-5F94-D545C4E81D38}"
+  "FileHash": "{E7738237-F01F-CA16-F3EC-8E72B5B71697}"
  }
 }

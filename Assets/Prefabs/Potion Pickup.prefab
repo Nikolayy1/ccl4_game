@@ -71,6 +71,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   manipulateMoveSpeedAmount: 3
+  pickupSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 11b47357effca1a4ea61a4c1338667b9, type: 2}
 --- !u!1 &6204698326645705461
 GameObject:
   m_ObjectHideFlags: 0

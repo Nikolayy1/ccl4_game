@@ -68,6 +68,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1545274036972381244}
+  punchSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c07fb89506a4b8d4192185b9d2a8e1e4, type: 2}
   speedPenalty: -3
   holdDuration: 1.5
   baseStealAmount: 50

@@ -98,6 +98,10 @@ MonoBehaviour:
   animator: {fileID: 5579898900016502006}
   trapDuration: 3
   speedPenalty: -3
+  snapSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7f82978cc6ed714489b05ee48c47b3b1, type: 2}
 --- !u!1 &7113576771769247965
 GameObject:
   m_ObjectHideFlags: 0

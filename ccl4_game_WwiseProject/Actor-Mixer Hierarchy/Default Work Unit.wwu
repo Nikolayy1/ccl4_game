@@ -74,6 +74,11 @@
 				<Sound Name="metal_crash" ID="{9513EDA6-5988-40EC-B0F6-B42B263ABCE9}" ShortID="926469956">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>750</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-20</Value>
@@ -412,6 +417,16 @@
 				<Sound Name="cage" ID="{476064F0-64C1-4873-A07E-CB65A24869A2}" ShortID="778519317">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>45</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>530</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
