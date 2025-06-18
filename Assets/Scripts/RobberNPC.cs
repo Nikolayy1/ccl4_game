@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class RobberNPC : MonoBehaviour
 {
+    [Header("Animation & Effects")]
     [SerializeField] Animator animator;
+    [SerializeField] AK.Wwise.Event punchSound; // ← Wwise sound to play when the punch happens
+
+    [Header("Gameplay")]
     [SerializeField] float speedPenalty = -3f;
     [SerializeField] float holdDuration = 1.5f;
     [SerializeField] int baseStealAmount = 50;
@@ -28,10 +32,12 @@ public class RobberNPC : MonoBehaviour
         lookDirection.y = 0f;
         transform.rotation = Quaternion.LookRotation(lookDirection) * Quaternion.Euler(0, 180f, 0);
 
-
         // Trigger punch animation
         if (animator != null)
             animator.SetTrigger("Punch");
+
+        // Play punch sound
+        punchSound?.Post(gameObject);
 
         // Lock movement
         PlayerController player = other.GetComponent<PlayerController>();

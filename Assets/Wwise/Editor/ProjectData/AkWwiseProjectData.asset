@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 9fb920f5e3fde64b8b7323080f8e0499
     GuidInternal: 
-    m_lastTime: -8584513753721436222
+    m_lastTime: -8584513395056941274
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2ffca4a167fc26468ae0c52953c3a12e
     GuidInternal: 
-    m_lastTime: -8584513753722265425
+    m_lastTime: -8584513395057617943
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 87f0ebfb7fdf3345be912b1ffb3c1007
     GuidInternal: 
-    m_lastTime: -8584513728552649580
+    m_lastTime: -8584513395057132878
     List:
     - name: MainSoundBank
       guid: 9ceb3dc424d4994498b45d59122714fb
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a24af5ef6c102e4c9d82af68e09ec446
     GuidInternal: 
-    m_lastTime: -8584513551274893168
+    m_lastTime: -8584513395064511481
     List:
     - name: Play_anvil
       guid: 57fc41c03bea4c4dabf873ead892d251
@@ -249,6 +249,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_fire_breath
+      guid: 6a67ec817d216544b4a749fd4c0d489e
+      id: 2858965315
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_fire_breath
+        ObjectType: 3
+        guid: 6a67ec817d216544b4a749fd4c0d489e
+      Path: Events\Default Work Unit\Play_fire_breath
+      maxAttenuation: 0
+      maxDuration: 1.57899
+      minDuration: 1.57899
+    - name: Play_goblin_eat
+      guid: fed2b5b78c574740acb87523efd8220e
+      id: 4170521540
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_goblin_eat
+        ObjectType: 3
+        guid: fed2b5b78c574740acb87523efd8220e
+      Path: Events\Default Work Unit\Play_goblin_eat
+      maxAttenuation: 0
+      maxDuration: 0.25219956
+      minDuration: 0.25219956
     - name: Play_goblin_stumble
       guid: 7db01f4883f9054c973c686c6d7c42cc
       id: 2512266768
@@ -283,6 +317,23 @@ MonoBehaviour:
       maxAttenuation: 40
       maxDuration: 0.76757157
       minDuration: 0.76757157
+    - name: Play_robber
+      guid: 2f4dfd9e41e9aa4fa5bb8435c6879e69
+      id: 2587316710
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a24af5ef6c102e4c9d82af68e09ec446
+      - ElementName: Play_robber
+        ObjectType: 3
+        guid: 2f4dfd9e41e9aa4fa5bb8435c6879e69
+      Path: Events\Default Work Unit\Play_robber
+      maxAttenuation: 0
+      maxDuration: 1.5730388
+      minDuration: 1.5730388
     - name: Play_stove
       guid: 685c2948163a6b43919660e7065a2dc6
       id: 2568488193
@@ -329,7 +380,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: db0ad51e19a7a54a8ab0012aa7c3911e
     GuidInternal: 
-    m_lastTime: -8584513753720767018
+    m_lastTime: -8584513395064501479
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -343,7 +394,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: b744a2b12337e443b8094bc4b830d178
     GuidInternal: 
-    m_lastTime: -8584513753721846409
+    m_lastTime: -8584513395056970872
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -357,7 +408,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: a68307c8a97c4d49acf670da007df9f5
     GuidInternal: 
-    m_lastTime: -8584513753722006202
+    m_lastTime: -8584513395056961284
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -371,7 +422,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: ce323568dd9d6243a65273bf47266c4e
     GuidInternal: 
-    m_lastTime: -8584513753721929786
+    m_lastTime: -8584513395056951273
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 0500000006000000070000000c0000000d00000053000000540000009000000091000000cc000000cd000000
