@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{C43DEB9C-D424-4499-98B4-5D59122714FB}",
     "Language": "SFX",
-    "Hash": "{E8FFA7DC-37D9-8902-3807-45F82749B5CB}",
+    "Hash": "{5BEB5426-79CE-2BC2-AE06-7F83D56F35FA}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainSoundBank",
     "ShortName": "MainSoundBank",
     "Path": "MainSoundBank.bnk",
     "Media": [
+     {
+      "Id": "94536348",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "cage.wav",
+      "CachePath": "DA/{DAEA3597-1A1E-4B27-87D3-D932CA209174}.wem"
+     },
      {
       "Id": "201437110",
       "Language": "SFX",
@@ -30,6 +38,14 @@
       "Location": "Memory",
       "ShortName": "coin_collect_uncut.wav",
       "CachePath": "DD/{DDBC197F-5286-7A63-0CE0-6CA2C9F67520}.wem"
+     },
+     {
+      "Id": "324396594",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "toilet.wav",
+      "CachePath": "52/{52AB2A9F-48C7-DA84-078E-C814674998F0}.wem"
      },
      {
       "Id": "365875068",
@@ -48,6 +64,22 @@
       "CachePath": "B4/{B46A0B8F-940D-AB47-0661-35993BCE53DC}.wem"
      },
      {
+      "Id": "614752507",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bear_trap.wav",
+      "CachePath": "3B/{3B6E38F9-16D1-8B26-F843-BE07DF3894B0}.wem"
+     },
+     {
+      "Id": "637275036",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "anvil(pitchitdown).wav",
+      "CachePath": "EF/{EF1C4A13-86E9-9F3F-8F6A-A016D5CA3A00}.wem"
+     },
+     {
       "Id": "661411155",
       "Language": "SFX",
       "Streaming": "false",
@@ -64,6 +96,22 @@
       "CachePath": "1C/{1CB2E787-60D2-829D-1816-469CE163A33F}.wem"
      },
      {
+      "Id": "770572895",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "stove.wav",
+      "CachePath": "2E/{2E992DC9-524C-CC84-BA32-19B20F51314E}.wem"
+     },
+     {
+      "Id": "852864816",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "augustus.wav",
+      "CachePath": "A0/{A0D00317-22FA-6560-C1A2-F63ED80CCF56}.wem"
+     },
+     {
       "Id": "914248540",
       "Language": "SFX",
       "Streaming": "false",
@@ -73,6 +121,36 @@
      }
     ],
     "Events": [
+     {
+      "Id": "63471576",
+      "Name": "Play_anvil",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_anvil",
+      "GUID": "{C041FC57-EA3B-4D4C-ABF8-73EAD892D251}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "0.29288647",
+      "DurationMax": "0.29288647",
+      "MediaRefs": [
+       {
+        "Id": "637275036"
+       }
+      ]
+     },
+     {
+      "Id": "745966549",
+      "Name": "Play_augustus",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_augustus",
+      "GUID": "{74DC9718-5744-468A-8736-22916D833DA3}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4193758",
+      "DurationMax": "0.4193758",
+      "MediaRefs": [
+       {
+        "Id": "852864816"
+       }
+      ]
+     },
      {
       "Id": "1408915754",
       "Name": "Play_barrel",
@@ -89,6 +167,20 @@
       ]
      },
      {
+      "Id": "2704972850",
+      "Name": "Play_bear_trap",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_bear_trap",
+      "GUID": "{527FF909-E8CB-45D5-817E-2C375A15E6B0}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8426055",
+      "DurationMax": "0.8426055",
+      "MediaRefs": [
+       {
+        "Id": "614752507"
+       }
+      ]
+     },
+     {
       "Id": "219250592",
       "Name": "Play_Boulder_Smash",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Boulder_Smash",
@@ -100,6 +192,21 @@
       "MediaRefs": [
        {
         "Id": "607970589"
+       }
+      ]
+     },
+     {
+      "Id": "3351331666",
+      "Name": "Play_cage",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_cage",
+      "GUID": "{6FB42488-155E-4532-A055-E91629B62049}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0387326",
+      "DurationMax": "1.0387326",
+      "MediaRefs": [
+       {
+        "Id": "94536348"
        }
       ]
      },
@@ -172,10 +279,38 @@
         "Id": "661411155"
        }
       ]
+     },
+     {
+      "Id": "2568488193",
+      "Name": "Play_stove",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_stove",
+      "GUID": "{48295C68-3A16-436B-9196-60E7065A2DC6}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8606245",
+      "DurationMax": "0.8606245",
+      "MediaRefs": [
+       {
+        "Id": "770572895"
+       }
+      ]
+     },
+     {
+      "Id": "1059076725",
+      "Name": "Play_toilet",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_toilet",
+      "GUID": "{89D87C3B-F21A-4E59-9D54-906437415580}",
+      "MaxAttenuation": "40",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "324396594"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{C42040CF-7A55-826F-21FA-1C3893ED48A5}"
+  "FileHash": "{6E715BF1-A36F-434A-B340-112303E06CCE}"
  }
 }

@@ -13,13 +13,19 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ANVIL = 63471576U;
+        static const AkUniqueID PLAY_AUGUSTUS = 745966549U;
         static const AkUniqueID PLAY_BARREL = 1408915754U;
+        static const AkUniqueID PLAY_BEAR_TRAP = 2704972850U;
         static const AkUniqueID PLAY_BOULDER_SMASH = 219250592U;
+        static const AkUniqueID PLAY_CAGE = 3351331666U;
         static const AkUniqueID PLAY_CHAINSAW = 4142890516U;
         static const AkUniqueID PLAY_COIN_COLLECT = 4196543958U;
         static const AkUniqueID PLAY_FACING_YOUR_NEMESIS = 1786139419U;
         static const AkUniqueID PLAY_GOBLIN_STUMBLE = 2512266768U;
         static const AkUniqueID PLAY_METAL_CRASH = 1557486083U;
+        static const AkUniqueID PLAY_STOVE = 2568488193U;
+        static const AkUniqueID PLAY_TOILET = 1059076725U;
     } // namespace EVENTS
 
     namespace BANKS

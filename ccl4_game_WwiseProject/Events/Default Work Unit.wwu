@@ -80,6 +80,72 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_anvil" ID="{C041FC57-EA3B-4D4C-ABF8-73EAD892D251}">
+					<ChildrenList>
+						<Action Name="" ID="{8B80D96E-3BE5-475F-BBCE-7CF1432FBF9D}" ShortID="737514452">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="anvil" ID="{9BE1A265-A1BF-4F60-A0F5-7A0A79A9646F}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_augustus" ID="{74DC9718-5744-468A-8736-22916D833DA3}">
+					<ChildrenList>
+						<Action Name="" ID="{68DB9E00-A461-4ED1-905B-A3B0CAD65DEA}" ShortID="288834226">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="augustus" ID="{6AD27D6F-B6F8-4363-A857-631B174B6BAE}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_cage" ID="{6FB42488-155E-4532-A055-E91629B62049}">
+					<ChildrenList>
+						<Action Name="" ID="{CA77CCD2-1C03-4461-AC2A-1289372155C4}" ShortID="1044183389">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="cage" ID="{476064F0-64C1-4873-A07E-CB65A24869A2}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_stove" ID="{48295C68-3A16-436B-9196-60E7065A2DC6}">
+					<ChildrenList>
+						<Action Name="" ID="{84D6BC5B-9CE5-4172-9EBA-C12D105D1EA0}" ShortID="123130968">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stove" ID="{AF89AA59-D3A4-41B7-8724-11EE4FD5A814}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_toilet" ID="{89D87C3B-F21A-4E59-9D54-906437415580}">
+					<ChildrenList>
+						<Action Name="" ID="{7014EAF0-B816-4885-8DE4-8F3E16309BB1}" ShortID="639617921">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="toilet" ID="{CCBE7A8E-E901-4242-8014-AD8442E9D148}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_bear_trap" ID="{527FF909-E8CB-45D5-817E-2C375A15E6B0}">
+					<ChildrenList>
+						<Action Name="" ID="{A8856C02-FDA9-4C62-97DA-C22A8C7A8A27}" ShortID="206915871">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bear_trap" ID="{706A2451-EEF0-4665-8708-E6035939474B}" WorkUnitID="{08F18DF0-86B6-4799-99B0-14E2D6EE01BD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

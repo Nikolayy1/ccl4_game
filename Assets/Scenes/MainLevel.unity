@@ -10615,6 +10615,10 @@ MonoBehaviour:
   animator: {fileID: 1478601321}
   collisionCooldown: 1
   manipulateMoveSpeedAmount: -2
+  hitSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f14cef6f1da84734a9e4063cbafc64af, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -16153,6 +16157,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefabs:
   - {fileID: 4759356826078896386, guid: d269ad6aa6e253a469b3952cac844e52, type: 3}
+  - {fileID: 75828162234804323, guid: 204fea4f1d295f94b9e752eccd0c6c10, type: 3}
+  - {fileID: 5816987321555711648, guid: 8a4ff2ad2f5c4eb459196c732ca2d9c3, type: 3}
+  - {fileID: 2299414379513665659, guid: 4f8be064ef387a749b37097d754878b6, type: 3}
+  - {fileID: 3855555482310788206, guid: d4c2474444d769541a103641997f15d6, type: 3}
+  - {fileID: 3142822723018746528, guid: 81a7a275e74c3f544af0670a075e52a4, type: 3}
+  - {fileID: 2887628619135108351, guid: adeafe2e5fb131945843fa25352e7991, type: 3}
+  - {fileID: 9064466871277088264, guid: 3daa71f1e0cca29409a9cb9ac0924d00, type: 3}
   obstacleSpawnTime: 3
   minObstacleSpawnTime: 0.5
   obstacleParent: {fileID: 306802611}

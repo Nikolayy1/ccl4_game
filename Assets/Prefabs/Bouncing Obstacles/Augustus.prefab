@@ -165,6 +165,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4759356826078896386, guid: 7be4620441aea604487cfd4693ad22dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1814395048065533312}
+    - targetCorrespondingSourceObject: {fileID: 4759356826078896386, guid: 7be4620441aea604487cfd4693ad22dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4913032335943103026}
+    - targetCorrespondingSourceObject: {fileID: 4759356826078896386, guid: 7be4620441aea604487cfd4693ad22dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774142924770278423}
   m_SourcePrefab: {fileID: 100100000, guid: 7be4620441aea604487cfd4693ad22dc, type: 3}
 --- !u!4 &1562123810606383680 stripped
 Transform:
@@ -199,3 +205,61 @@ CapsuleCollider:
   m_Height: 1.2810161
   m_Direction: 1
   m_Center: {x: -0.6123137, y: -0.18126369, z: 1.0618604}
+--- !u!114 &4913032335943103026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3855555482310788206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a6b2c4ebac83d47bfe53a138ad827d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &774142924770278423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3855555482310788206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bdd040ade4870b4688821e7ac5c3687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: d1bbb3b5
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3c5375857d4dd914697a3335bc18028f, type: 2}
+  useCallbacks: 0
+  stopSoundOnDestroy: 1
+  Callbacks: []
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
