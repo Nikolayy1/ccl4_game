@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID PLAY_FACING_YOUR_NEMESIS = 1786139419U;
         static const AkUniqueID PLAY_FIRE_BREATH = 2858965315U;
         static const AkUniqueID PLAY_GOBLIN_EAT = 4170521540U;
+        static const AkUniqueID PLAY_GOBLIN_LAUGH = 1238619421U;
         static const AkUniqueID PLAY_GOBLIN_STUMBLE = 2512266768U;
         static const AkUniqueID PLAY_METAL_CRASH = 1557486083U;
         static const AkUniqueID PLAY_ROBBER = 2587316710U;

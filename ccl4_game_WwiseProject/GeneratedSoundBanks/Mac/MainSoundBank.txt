@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	219250592	Play_Boulder_Smash			\Default Work Unit\Play_Boulder_Smash	
 	745966549	Play_augustus			\Default Work Unit\Play_augustus	
 	1059076725	Play_toilet			\Default Work Unit\Play_toilet	
+	1238619421	Play_goblin_laugh			\Default Work Unit\Play_goblin_laugh	
 	1408915754	Play_barrel			\Default Work Unit\Play_barrel	
 	1557486083	Play_metal_crash			\Default Work Unit\Play_metal_crash	
 	1786139419	Play_Facing_Your_Nemesis			\Default Work Unit\Play_Facing_Your_Nemesis	
@@ -17,6 +18,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4196543958	Play_coin_collect			\Default Work Unit\Play_coin_collect	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	88464631	goblin_laugh	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\F9\{F94DF977-EB04-01FF-26F5-A0C145011557}.wem		\Actor-Mixer Hierarchy\Default Work Unit\goblin_laugh		289708
 	94536348	cage	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\FE\{FEE7236F-6C72-1AF9-8823-FF0F4CC09452}.wem		\Actor-Mixer Hierarchy\Default Work Unit\cage		183328
 	201437110	barrel	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\B9\{B94C2F34-D7B1-AEF2-25EC-BAA1FD9E54BA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\barrel		59672
 	256492698	coin_collect	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\1E\{1E50C488-B62A-CDD4-6909-DE896D1A7166}.wem		\Actor-Mixer Hierarchy\Default Work Unit\coin_collect		68224

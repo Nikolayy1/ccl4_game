@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{C43DEB9C-D424-4499-98B4-5D59122714FB}",
     "Language": "SFX",
-    "Hash": "{AE5224FA-5116-3FF4-198E-6C0D4F27B2BF}",
+    "Hash": "{923EA19E-1298-6868-CAAD-08EB0893065A}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainSoundBank",
     "ShortName": "MainSoundBank",
     "Path": "MainSoundBank.bnk",
     "Media": [
+     {
+      "Id": "88464631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "goblin_laugh_pack.wav",
+      "CachePath": "F9/{F94DF977-EB04-01FF-26F5-A0C145011557}.wem"
+     },
      {
       "Id": "94536348",
       "Language": "SFX",
@@ -280,6 +288,7 @@
       "Name": "Play_fire_breath",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_fire_breath",
       "GUID": "{81EC676A-217D-4465-B4A7-49FD4C0D489E}",
+      "MaxAttenuation": "58",
       "DurationType": "OneShot",
       "DurationMin": "1.57899",
       "DurationMax": "1.57899",
@@ -300,6 +309,21 @@
       "MediaRefs": [
        {
         "Id": "1036550998"
+       }
+      ]
+     },
+     {
+      "Id": "1238619421",
+      "Name": "Play_goblin_laugh",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_goblin_laugh",
+      "GUID": "{4B18A004-FE8E-46D8-AD73-8CEF337FC3AC}",
+      "MaxAttenuation": "40",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6417907",
+      "DurationMax": "1.6417907",
+      "MediaRefs": [
+       {
+        "Id": "88464631"
        }
       ]
      },
@@ -377,6 +401,6 @@
     ]
    }
   ],
-  "FileHash": "{E7738237-F01F-CA16-F3EC-8E72B5B71697}"
+  "FileHash": "{B5B781E6-80D2-0D17-7CDE-26889C8A91FA}"
  }
 }

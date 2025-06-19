@@ -58,7 +58,11 @@ MonoBehaviour:
   vomitImpactSoundEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: a8ade1d3cad2b154a864d586538bbacb, type: 2}
+  scavengerLaughEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2dad7e28ace973b45ac9418558fb55bc, type: 2}
 --- !u!1 &5737784193984610292
 GameObject:
   m_ObjectHideFlags: 0
