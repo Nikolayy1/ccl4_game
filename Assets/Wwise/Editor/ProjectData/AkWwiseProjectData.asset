@@ -263,7 +263,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 6a67ec817d216544b4a749fd4c0d489e
       Path: Events\Default Work Unit\Play_fire_breath
-      maxAttenuation: 0
+      maxAttenuation: 58
       maxDuration: 1.57899
       minDuration: 1.57899
     - name: Play_goblin_eat
