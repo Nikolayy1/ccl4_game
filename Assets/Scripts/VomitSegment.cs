@@ -8,12 +8,12 @@ public class VomitSegment : MonoBehaviour
     [SerializeField] float tickInterval = 0.5f;
 
     [Header("Movement Settings")]
-    [Tooltip("Speed at which this segment moves toward the player (units/sec)")]
     [SerializeField] float moveSpeed = 8f;
 
     [Header("Auto-Despawn")]
-    [Tooltip("Time in seconds before this segment is automatically destroyed")]
     [SerializeField] float lifetime = 8f;
+
+    private AK.Wwise.Event impactSound;
 
     private bool playerInside = false;
     private float timer = 0f;
@@ -22,7 +22,6 @@ public class VomitSegment : MonoBehaviour
 
     void Awake()
     {
-        // Ensure the Rigidbody is kinematic to avoid unwanted physics
         var rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
         rb.useGravity = false;
@@ -30,10 +29,8 @@ public class VomitSegment : MonoBehaviour
 
     void Update()
     {
-        // Move the segment toward the player
         transform.Translate(Vector3.back * moveSpeed * Time.deltaTime, Space.World);
 
-        // Debuff ticking
         if (playerInside && player != null)
         {
             timer += Time.deltaTime;
@@ -45,7 +42,6 @@ public class VomitSegment : MonoBehaviour
             }
         }
 
-        // Auto-destroy after lifetime
         age += Time.deltaTime;
         if (age >= lifetime)
         {
@@ -60,7 +56,10 @@ public class VomitSegment : MonoBehaviour
         {
             player = candidate;
             playerInside = true;
-            timer = tickInterval; // trigger immediately
+            timer = tickInterval;
+
+            impactSound?.Post(gameObject);
+
             Debug.Log(">> Player entered vomit zone.");
         }
     }
@@ -75,5 +74,10 @@ public class VomitSegment : MonoBehaviour
             timer = 0f;
             Debug.Log(">> Player exited vomit zone.");
         }
+    }
+
+    public void SetImpactSound(AK.Wwise.Event soundEvent)
+    {
+        impactSound = soundEvent;
     }
 }

@@ -2,18 +2,29 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement Settings")]
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float xClamp = 3f; // limit movement on the X-axis (side-to-side)
-    [SerializeField] float zClamp = 2f; // limit movement on the z-axis (front-to-back)
+    [SerializeField] float xClamp = 3f;
+    [SerializeField] float zClamp = 2f;
+
+    [Header("Jump Settings")]
+    [SerializeField] float jumpForce = 6f;
+    [SerializeField] float groundCheckDistance = 0.2f;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] Animator animator;
 
     Vector2 movement;
     Rigidbody rigidBody;
     LevelGenerator levelGenerator;
 
     private bool isTrapped = false;
-    float speedDebuff = 0f;
+    private bool isGrounded = false;
+    private float speedDebuff = 0f;
+
+    const string jumpBool = "Jump";
 
     void Awake()
     {
@@ -27,7 +38,19 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        CheckGrounded();
         HandleMovement();
+    }
+
+    void CheckGrounded()
+    {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
+
+        // Reset jump animation when grounded
+        if (isGrounded && animator != null)
+        {
+            animator.SetBool(jumpBool, false);
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -39,6 +62,18 @@ public class PlayerController : MonoBehaviour
         }
 
         movement = context.ReadValue<Vector2>();
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.started && isGrounded && !isTrapped)
+        {
+            rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+            if (animator != null)
+                animator.SetBool(jumpBool, true);
+        }
+        animator.Play("McJump");
     }
 
     public void ApplySpeedDebuff(float amount)
@@ -63,19 +98,16 @@ public class PlayerController : MonoBehaviour
 
         if (levelGenerator != null)
         {
-            float baseSpeed = 8f; // Match your LevelGenerator's default
+            float baseSpeed = 8f;
             speedMultiplier = levelGenerator.GetMoveSpeed() / baseSpeed;
-
         }
 
         Vector3 newPosition = currentPosition + moveDirection * (moveSpeed * speedMultiplier * Time.fixedDeltaTime);
-
         newPosition.x = Mathf.Clamp(newPosition.x, -xClamp, xClamp);
         newPosition.z = Mathf.Clamp(newPosition.z, -zClamp, zClamp);
 
         rigidBody.MovePosition(newPosition);
     }
-
 
     public void LockMovement(float duration)
     {
@@ -91,5 +123,11 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(duration);
         isTrapped = false;
         Debug.Log(">> Player movement UNLOCKED");
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = isGrounded ? Color.green : Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
     }
 }

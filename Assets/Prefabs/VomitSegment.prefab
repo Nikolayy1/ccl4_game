@@ -71,6 +71,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedPenalty: -2
   tickInterval: 0.5
+  moveSpeed: 20
+  lifetime: 3
 --- !u!54 &183897605846909686
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ScavengerNPC : MonoBehaviour
 {
+    [SerializeField] Animator animator;
+
     [Header("Vomit Settings")]
     [SerializeField] GameObject vomitSegmentPrefab;
     [SerializeField] Transform vomitSpawnPoint;
@@ -15,11 +17,14 @@ public class ScavengerNPC : MonoBehaviour
     [SerializeField] float spawnZ = 50f;
     [SerializeField] float targetZ = 35f;
 
+    [Header("Audio")]
+    [SerializeField] AK.Wwise.Event vomitImpactSoundEvent;
+
     private Vector3 targetPosition;
 
     void Start()
     {
-        // Position the scavenger at the starting Z
+        // Set starting position
         Vector3 pos = transform.position;
         pos.y = flyHeight;
         pos.z = spawnZ;
@@ -59,8 +64,16 @@ public class ScavengerNPC : MonoBehaviour
         while (elapsed < vomitDuration)
         {
             Vector3 spawnPos = vomitSpawnPoint != null ? vomitSpawnPoint.position : transform.position;
-            // Spawn segment in world space so it moves independently
-            Instantiate(vomitSegmentPrefab, spawnPos, Quaternion.identity);
+
+            GameObject segment = Instantiate(vomitSegmentPrefab, spawnPos, Quaternion.identity);
+
+            // ✅ Pass sound to the segment
+            VomitSegment vs = segment.GetComponent<VomitSegment>();
+            if (vs != null)
+            {
+                vs.SetImpactSound(vomitImpactSoundEvent);
+            }
+
             Debug.Log(">> Spawned vomit segment at " + spawnPos);
 
             yield return new WaitForSeconds(vomitInterval);
