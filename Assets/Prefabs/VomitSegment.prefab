@@ -69,8 +69,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3a8bdb407577741b11d674c7ec4cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPenalty: -2
-  tickInterval: 0.5
+  tickInterval: 2
+  slowAmount: 2
+  maxTicks: 3
   moveSpeed: 20
   lifetime: 3
 --- !u!54 &183897605846909686

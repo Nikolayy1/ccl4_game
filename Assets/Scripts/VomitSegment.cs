@@ -4,8 +4,8 @@ using UnityEngine;
 public class VomitSegment : MonoBehaviour
 {
     [Header("Debuff Settings")]
-    [SerializeField] float tickInterval = 0.5f;
-    [SerializeField] float speedPenalty = 2f;
+    [SerializeField] float tickInterval = 1f;
+    [SerializeField] float slowAmount = 2f;
 
     [Header("Movement Settings")]
     [SerializeField] float moveSpeed = 8f;
@@ -15,9 +15,10 @@ public class VomitSegment : MonoBehaviour
 
     private AK.Wwise.Event impactSound;
     private ScavengerNPC scavenger;
-    private bool playerInside = false;
-    private float timer = 0f;
+
     private float age = 0f;
+    private float timer = 0f;
+    private bool playerInside = false;
 
     private LevelGenerator levelGenerator;
 
@@ -35,21 +36,31 @@ public class VomitSegment : MonoBehaviour
         if (playerInside)
         {
             timer += Time.deltaTime;
+
             if (timer >= tickInterval)
             {
                 timer = 0f;
 
-                if (levelGenerator == null)
-                    levelGenerator = FindObjectOfType<LevelGenerator>();
-
-                if (levelGenerator != null)
+                // Ask scavenger if we're allowed to tick
+                if (scavenger != null && scavenger.CanApplyTick())
                 {
-                    levelGenerator.ChangeChunkMoveSpeed(-speedPenalty);
-                    Debug.Log(">> Vomit tick: slowed environment by -" + speedPenalty);
-                }
+                    if (levelGenerator == null)
+                        levelGenerator = FindObjectOfType<LevelGenerator>();
 
-                impactSound?.Post(gameObject);
-                scavenger?.PlayLaugh();
+                    if (levelGenerator != null)
+                    {
+                        levelGenerator.ChangeChunkMoveSpeed(-slowAmount);
+                        Debug.Log(">> Vomit tick: slowed by " + slowAmount);
+                    }
+
+                    impactSound?.Post(gameObject);
+                    scavenger.PlayLaugh();
+                }
+                else
+                {
+                    // Disable ticking if scavenger budget exhausted
+                    playerInside = false;
+                }
             }
         }
 
@@ -65,7 +76,7 @@ public class VomitSegment : MonoBehaviour
         if (other.GetComponentInParent<PlayerController>() != null)
         {
             playerInside = true;
-            timer = tickInterval;
+            timer = tickInterval; // trigger first tick instantly
             Debug.Log(">> Player entered vomit zone.");
         }
     }

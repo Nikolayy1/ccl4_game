@@ -51,11 +51,16 @@ MonoBehaviour:
   vomitSpawnPoint: {fileID: 3858989765993714541}
   vomitInterval: 0.1
   vomitDuration: 10
+  totalTickLimit: 3
   enterDuration: 1.5
   flyHeight: 3
   spawnZ: 45
   targetZ: 25
   vomitImpactSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  scavengerLaughEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}

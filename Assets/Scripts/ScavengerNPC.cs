@@ -10,6 +10,7 @@ public class ScavengerNPC : MonoBehaviour
     [SerializeField] Transform vomitSpawnPoint;
     [SerializeField] float vomitInterval = 0.5f;
     [SerializeField] float vomitDuration = 10f;
+    [SerializeField] int totalTickLimit = 6; // New: Max ticks across all vomit segments
 
     [Header("Flight Settings")]
     [SerializeField] float enterDuration = 1.5f;
@@ -19,14 +20,14 @@ public class ScavengerNPC : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] AK.Wwise.Event vomitImpactSoundEvent;
-    [SerializeField] AK.Wwise.Event scavengerLaughEvent; // <- Add this
+    [SerializeField] AK.Wwise.Event scavengerLaughEvent;
 
     private Vector3 targetPosition;
-    private bool hasLaughed = false; // <- Track laugh
+    private bool hasLaughed = false;
+    private int ticksUsed = 0; // New: shared tick counter
 
     void Start()
     {
-        // Set starting position
         Vector3 pos = transform.position;
         pos.y = flyHeight;
         pos.z = spawnZ;
@@ -108,5 +109,16 @@ public class ScavengerNPC : MonoBehaviour
             hasLaughed = true;
             Debug.Log(">> Scavenger laughed!");
         }
+    }
+
+    // New: Check and count ticks across all clouds
+    public bool CanApplyTick()
+    {
+        if (ticksUsed < totalTickLimit)
+        {
+            ticksUsed++;
+            return true;
+        }
+        return false;
     }
 }
