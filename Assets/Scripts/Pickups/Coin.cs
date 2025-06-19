@@ -9,6 +9,7 @@ public class Coin : Pickup
     [SerializeField] GameManager gameManager;
     [SerializeField] int scorePerCoinValue = 10;
     [SerializeField] float timeBoostPerCoin = 1f;
+    [SerializeField] AK.Wwise.Event coinPickupSound;
 
     public void Init(ScoreManager scoreManager, GameManager gameManager)
     {
@@ -18,7 +19,9 @@ public class Coin : Pickup
 
     protected override void OnPickup()
     {
-        scoreManager.IncreaseScore(scorePerCoinValue);
-        gameManager.IncreaseTime(timeBoostPerCoin);
+        scoreManager?.IncreaseScore(scorePerCoinValue);
+        gameManager?.IncreaseTime(timeBoostPerCoin);
+
+        coinPickupSound?.Post(triggeringObject ?? gameObject);
     }
 }

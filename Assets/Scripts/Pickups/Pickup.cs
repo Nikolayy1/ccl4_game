@@ -1,10 +1,9 @@
 using UnityEngine;
 
-// The Pickup class is a base class for all pickup items in the game. Potion and Coin classes inherit from it.
-// It handles the basic functionality of detecting when a player collides with a pickup item.
 public abstract class Pickup : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 100f;
+    protected GameObject triggeringObject;
 
     const string playerString = "Player";
 
@@ -18,6 +17,7 @@ public abstract class Pickup : MonoBehaviour
     {
         if (other.CompareTag(playerString))
         {
+            triggeringObject = other.gameObject; // 👈 this is the key line
             OnPickup();
             Destroy(gameObject);
         }

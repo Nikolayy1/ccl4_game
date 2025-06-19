@@ -108,6 +108,10 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   scorePerCoinValue: 10
   timeBoostPerCoin: 0.25
+  coinPickupSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &-1854601945596578411
 MonoBehaviour:
   m_ObjectHideFlags: 0
