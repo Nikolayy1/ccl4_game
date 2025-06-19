@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
 
     private bool isTrapped = false;
     private bool isGrounded = false;
-    private float speedDebuff = 0f;
 
     const string jumpBool = "Jump";
 
@@ -46,7 +45,6 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
 
-        // Reset jump animation when grounded
         if (isGrounded && animator != null)
         {
             animator.SetBool(jumpBool, false);
@@ -73,18 +71,6 @@ public class PlayerController : MonoBehaviour
             if (animator != null)
                 animator.SetBool(jumpBool, true);
         }
-        animator.Play("McJump");
-    }
-
-    public void ApplySpeedDebuff(float amount)
-    {
-        speedDebuff += amount;
-        Debug.Log(">> Player speed debuff now: " + speedDebuff);
-    }
-
-    public void RemoveSpeedDebuff()
-    {
-        speedDebuff = 0f;
     }
 
     void HandleMovement()

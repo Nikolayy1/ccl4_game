@@ -4,8 +4,8 @@ using UnityEngine;
 public class VomitSegment : MonoBehaviour
 {
     [Header("Debuff Settings")]
-    [SerializeField] float speedPenalty = -2f;
     [SerializeField] float tickInterval = 0.5f;
+    [SerializeField] float speedPenalty = 2f;
 
     [Header("Movement Settings")]
     [SerializeField] float moveSpeed = 8f;
@@ -14,12 +14,12 @@ public class VomitSegment : MonoBehaviour
     [SerializeField] float lifetime = 8f;
 
     private AK.Wwise.Event impactSound;
-    private ScavengerNPC scavenger; // <-- add this
-
+    private ScavengerNPC scavenger;
     private bool playerInside = false;
     private float timer = 0f;
-    private PlayerController player;
     private float age = 0f;
+
+    private LevelGenerator levelGenerator;
 
     void Awake()
     {
@@ -32,14 +32,24 @@ public class VomitSegment : MonoBehaviour
     {
         transform.Translate(Vector3.back * moveSpeed * Time.deltaTime, Space.World);
 
-        if (playerInside && player != null)
+        if (playerInside)
         {
             timer += Time.deltaTime;
             if (timer >= tickInterval)
             {
                 timer = 0f;
-                player.ApplySpeedDebuff(speedPenalty);
-                Debug.Log(">> [Segment] Debuff applied (" + speedPenalty + ")");
+
+                if (levelGenerator == null)
+                    levelGenerator = FindObjectOfType<LevelGenerator>();
+
+                if (levelGenerator != null)
+                {
+                    levelGenerator.ChangeChunkMoveSpeed(-speedPenalty);
+                    Debug.Log(">> Vomit tick: slowed environment by -" + speedPenalty);
+                }
+
+                impactSound?.Post(gameObject);
+                scavenger?.PlayLaugh();
             }
         }
 
@@ -52,27 +62,19 @@ public class VomitSegment : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        var candidate = other.GetComponentInParent<PlayerController>();
-        if (candidate != null)
+        if (other.GetComponentInParent<PlayerController>() != null)
         {
-            player = candidate;
             playerInside = true;
             timer = tickInterval;
-
-            impactSound?.Post(gameObject);
-            scavenger?.PlayLaugh(); // <-- trigger laugh only once per scavenger
-
             Debug.Log(">> Player entered vomit zone.");
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        var candidate = other.GetComponentInParent<PlayerController>();
-        if (candidate != null && candidate == player)
+        if (other.GetComponentInParent<PlayerController>() != null)
         {
             playerInside = false;
-            player = null;
             timer = 0f;
             Debug.Log(">> Player exited vomit zone.");
         }

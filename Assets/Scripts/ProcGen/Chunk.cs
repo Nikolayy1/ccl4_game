@@ -146,8 +146,11 @@ public class Chunk : MonoBehaviour
 
             PotionTracker.Instance.SetScavengerActive(true);
             PotionTracker.Instance.ResetPotionCounter();
+
+            Debug.Log(">> Scavenger spawned due to potion milestone.");
         }
     }
+
 
 
 
