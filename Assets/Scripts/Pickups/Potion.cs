@@ -20,7 +20,9 @@ public class Potion : Pickup
     protected override void OnPickup()
     {
         levelGenerator.ChangeChunkMoveSpeed(manipulateMoveSpeedAmount);
-        // Play Wwise sound event
+        // Wwise sound event
         pickupSound?.Post(gameObject);
+        // Register potion pickup globally
+        PotionTracker.Instance?.RegisterPotionPickup();
     }
 }

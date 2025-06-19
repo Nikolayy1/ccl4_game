@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     LevelGenerator levelGenerator;
 
     private bool isTrapped = false;
+    float speedDebuff = 0f;
 
     void Awake()
     {
@@ -33,12 +34,22 @@ public class PlayerController : MonoBehaviour
     {
         if (isTrapped)
         {
-            movement = Vector2.zero; // Ignore movement when trapped
+            movement = Vector2.zero;
             return;
         }
 
         movement = context.ReadValue<Vector2>();
-        Debug.Log($"Movement input received: {movement}");
+    }
+
+    public void ApplySpeedDebuff(float amount)
+    {
+        speedDebuff += amount;
+        Debug.Log(">> Player speed debuff now: " + speedDebuff);
+    }
+
+    public void RemoveSpeedDebuff()
+    {
+        speedDebuff = 0f;
     }
 
     void HandleMovement()
@@ -65,6 +76,7 @@ public class PlayerController : MonoBehaviour
         rigidBody.MovePosition(newPosition);
     }
 
+
     public void LockMovement(float duration)
     {
         Debug.Log(">> LockMovement called by: " + duration + "s");
@@ -74,12 +86,9 @@ public class PlayerController : MonoBehaviour
     private IEnumerator TrapLockCoroutine(float duration)
     {
         Debug.Log(">> Player movement LOCKED");
-
         isTrapped = true;
         movement = Vector2.zero;
-
         yield return new WaitForSeconds(duration);
-
         isTrapped = false;
         Debug.Log(">> Player movement UNLOCKED");
     }

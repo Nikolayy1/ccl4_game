@@ -9,6 +9,7 @@ public class Chunk : MonoBehaviour
     [SerializeField] GameObject coinPrefab;
     [SerializeField] GameObject bearTrapPrefab;
     [SerializeField] GameObject robberPrefab;
+    [SerializeField] GameObject scavengerPrefab;
 
 
 
@@ -48,6 +49,7 @@ public class Chunk : MonoBehaviour
         this.scoreManager = scoreManager;
         this.gameManager = gameManager;
         TrySpawnRobber();
+        TrySpawnScavenger();
         this.chunkIndex = chunkIndex;
     }
 
@@ -131,6 +133,22 @@ public class Chunk : MonoBehaviour
             lastRobberScoreThreshold++;
         }
     }
+
+    void TrySpawnScavenger()
+    {
+        if (PotionTracker.Instance != null &&
+            PotionTracker.Instance.ShouldSpawnScavenger() &&
+            availableLanes.Count > 0)
+        {
+            int lane = SelectLane();
+            Vector3 pos = new Vector3(lanes[lane], transform.position.y + 3f, transform.position.z);
+            Instantiate(scavengerPrefab, pos, Quaternion.identity);
+
+            PotionTracker.Instance.SetScavengerActive(true);
+            Debug.Log(">> Scavenger spawned due to potion milestone.");
+        }
+    }
+
 
     // Removes a lane from the list so it's not reused by other pickups
     int SelectLane()
