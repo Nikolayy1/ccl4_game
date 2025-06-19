@@ -14,6 +14,7 @@ public class VomitSegment : MonoBehaviour
     [SerializeField] float lifetime = 8f;
 
     private AK.Wwise.Event impactSound;
+    private ScavengerNPC scavenger; // <-- add this
 
     private bool playerInside = false;
     private float timer = 0f;
@@ -59,6 +60,7 @@ public class VomitSegment : MonoBehaviour
             timer = tickInterval;
 
             impactSound?.Post(gameObject);
+            scavenger?.PlayLaugh(); // <-- trigger laugh only once per scavenger
 
             Debug.Log(">> Player entered vomit zone.");
         }
@@ -79,5 +81,10 @@ public class VomitSegment : MonoBehaviour
     public void SetImpactSound(AK.Wwise.Event soundEvent)
     {
         impactSound = soundEvent;
+    }
+
+    public void SetScavengerReference(ScavengerNPC scavengerNPC)
+    {
+        scavenger = scavengerNPC;
     }
 }

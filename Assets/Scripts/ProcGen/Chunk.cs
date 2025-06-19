@@ -145,9 +145,10 @@ public class Chunk : MonoBehaviour
             Instantiate(scavengerPrefab, pos, Quaternion.identity);
 
             PotionTracker.Instance.SetScavengerActive(true);
-            Debug.Log(">> Scavenger spawned due to potion milestone.");
+            PotionTracker.Instance.ResetPotionCounter();
         }
     }
+
 
 
     // Removes a lane from the list so it's not reused by other pickups

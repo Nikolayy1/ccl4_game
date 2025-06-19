@@ -4,6 +4,8 @@ public class PotionTracker : MonoBehaviour
 {
     public static PotionTracker Instance { get; private set; }
 
+    [SerializeField] int potionsPerScavenger = 5;
+
     public int PotionsPickedUp { get; private set; } = 0;
     public bool ScavengerActive { get; private set; } = false;
 
@@ -23,7 +25,12 @@ public class PotionTracker : MonoBehaviour
 
     public bool ShouldSpawnScavenger()
     {
-        return !ScavengerActive && PotionsPickedUp > 0 && PotionsPickedUp % 5 == 0;
+        return !ScavengerActive && PotionsPickedUp >= potionsPerScavenger;
+    }
+
+    public void ResetPotionCounter()
+    {
+        PotionsPickedUp = 0;
     }
 
     public void SetScavengerActive(bool active)

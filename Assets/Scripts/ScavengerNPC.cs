@@ -19,8 +19,10 @@ public class ScavengerNPC : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] AK.Wwise.Event vomitImpactSoundEvent;
+    [SerializeField] AK.Wwise.Event scavengerLaughEvent; // <- Add this
 
     private Vector3 targetPosition;
+    private bool hasLaughed = false; // <- Track laugh
 
     void Start()
     {
@@ -67,11 +69,11 @@ public class ScavengerNPC : MonoBehaviour
 
             GameObject segment = Instantiate(vomitSegmentPrefab, spawnPos, Quaternion.identity);
 
-            // ✅ Pass sound to the segment
             VomitSegment vs = segment.GetComponent<VomitSegment>();
             if (vs != null)
             {
                 vs.SetImpactSound(vomitImpactSoundEvent);
+                vs.SetScavengerReference(this);
             }
 
             Debug.Log(">> Spawned vomit segment at " + spawnPos);
@@ -96,5 +98,15 @@ public class ScavengerNPC : MonoBehaviour
         Debug.Log(">> Scavenger flying away");
         PotionTracker.Instance?.SetScavengerActive(false);
         Destroy(gameObject);
+    }
+
+    public void PlayLaugh()
+    {
+        if (!hasLaughed)
+        {
+            scavengerLaughEvent?.Post(gameObject);
+            hasLaughed = true;
+            Debug.Log(">> Scavenger laughed!");
+        }
     }
 }
