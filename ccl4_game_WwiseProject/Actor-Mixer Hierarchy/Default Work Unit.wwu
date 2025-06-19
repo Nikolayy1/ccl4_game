@@ -567,6 +567,35 @@
 						<ActiveSource Name="robber" ID="{86F52097-DC9E-4F57-9C89-B71077D1BE0C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="goblin_laugh_pack" ID="{1C66CB16-4B51-4CF7-A337-C4F2A4772E56}" ShortID="877030526">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{910F89A1-6A63-42B5-9AD0-3A8F26B554DC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A1A4FC2F-FC67-4626-8AE0-C52953C3A12E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="goblin_laugh_pack" ID="{922D577D-944B-44F8-9CF8-7A36A9F23D6D}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0887454644291239"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.510286420467461"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="12.6462286811501"/>
+								<Property Name="TrimEnd" Type="Real64" Value="14.2880194293336"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>goblin_laugh_pack.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="88464631"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="goblin_laugh_pack" ID="{922D577D-944B-44F8-9CF8-7A36A9F23D6D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
