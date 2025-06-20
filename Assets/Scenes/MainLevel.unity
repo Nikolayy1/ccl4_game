@@ -16756,7 +16756,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2418315102070648102, guid: a918726cbbb3e2b40a26f765e5d40ce3, type: 3}
       propertyPath: jumpForce
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2418315102070648102, guid: a918726cbbb3e2b40a26f765e5d40ce3, type: 3}
       propertyPath: groundCheckDistance
