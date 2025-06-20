@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour
 
     private bool isTrapped = false;
     private bool isGrounded = false;
-
-    const string jumpBool = "Jump";
+    private bool isJumping = false;
+    bool groundCheckEnabled = true;
 
     void Awake()
     {
@@ -43,11 +43,15 @@ public class PlayerController : MonoBehaviour
 
     void CheckGrounded()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
+        if (!groundCheckEnabled)
+            return;
 
-        if (isGrounded && animator != null)
+        isGrounded = false;
+
+        Vector3 rayOrigin = transform.position + Vector3.down * 0.1f;
+        if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, groundCheckDistance, groundLayer))
         {
-            animator.SetBool(jumpBool, false);
+            isGrounded = true;
         }
     }
 
@@ -64,13 +68,33 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.started && isGrounded && !isTrapped)
+        if (context.started && isGrounded && !isJumping && !isTrapped)
         {
-            rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
-            if (animator != null)
-                animator.SetBool(jumpBool, true);
+            StartCoroutine(JumpFlow());
         }
+    }
+
+    IEnumerator JumpFlow()
+    {
+        isJumping = true;
+        groundCheckEnabled = false;
+
+        rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+
+        if (animator != null)
+            animator.SetBool("Jump", true); // ← bool again
+
+        // Delay rechecking ground to avoid false positive
+        yield return new WaitForSeconds(0.2f);
+        groundCheckEnabled = true;
+
+        // Wait until actually landed
+        yield return new WaitUntil(() => isGrounded);
+
+        if (animator != null)
+            animator.SetBool("Jump", false); // ← returns to RunMC
+
+        isJumping = false;
     }
 
     void HandleMovement()
@@ -101,15 +125,25 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(TrapLockCoroutine(duration));
     }
 
-    private IEnumerator TrapLockCoroutine(float duration)
+    private IEnumerator TrapLockCoroutine(float duration) //when the player is trapped, bear trap or robber
     {
         Debug.Log(">> Player movement LOCKED");
         isTrapped = true;
         movement = Vector2.zero;
+
+        if (animator != null)
+            animator.SetTrigger("Trapped"); // trigger IdleMC
+
         yield return new WaitForSeconds(duration);
+
         isTrapped = false;
+
+        if (animator != null)
+            animator.SetTrigger("Run"); // trigger RunMC
+
         Debug.Log(">> Player movement UNLOCKED");
     }
+
 
     void OnDrawGizmosSelected()
     {

@@ -10,7 +10,7 @@ public class ScavengerNPC : MonoBehaviour
     [SerializeField] Transform vomitSpawnPoint;
     [SerializeField] float vomitInterval = 0.5f;
     [SerializeField] float vomitDuration = 10f;
-    [SerializeField] int totalTickLimit = 6; // New: Max ticks across all vomit segments
+    [SerializeField] int totalTickLimit = 6; // Max ticks across all vomit segments, no massive stacking
 
     [Header("Flight Settings")]
     [SerializeField] float enterDuration = 1.5f;
@@ -24,7 +24,7 @@ public class ScavengerNPC : MonoBehaviour
 
     private Vector3 targetPosition;
     private bool hasLaughed = false;
-    private int ticksUsed = 0; // New: shared tick counter
+    private int ticksUsed = 0;
 
     void Start()
     {
@@ -57,12 +57,12 @@ public class ScavengerNPC : MonoBehaviour
             yield return null;
         }
         transform.position = targetPosition;
-        Debug.Log(">> Scavenger reached target pos");
+        Debug.Log(">> Scavenger in position");
     }
 
     IEnumerator SpewVomit()
     {
-        Debug.Log(">> Scavenger spewing...");
+        Debug.Log(">> Scavenger vommiting...");
         float elapsed = 0f;
         while (elapsed < vomitDuration)
         {
@@ -76,8 +76,6 @@ public class ScavengerNPC : MonoBehaviour
                 vs.SetImpactSound(vomitImpactSoundEvent);
                 vs.SetScavengerReference(this);
             }
-
-            Debug.Log(">> Spawned vomit segment at " + spawnPos);
 
             yield return new WaitForSeconds(vomitInterval);
             elapsed += vomitInterval;
@@ -96,7 +94,7 @@ public class ScavengerNPC : MonoBehaviour
             transform.position = Vector3.Lerp(start, end, t / duration);
             yield return null;
         }
-        Debug.Log(">> Scavenger flying away");
+        Debug.Log(">> Scavenger is flying away");
         PotionTracker.Instance?.SetScavengerActive(false);
         Destroy(gameObject);
     }
@@ -107,11 +105,10 @@ public class ScavengerNPC : MonoBehaviour
         {
             scavengerLaughEvent?.Post(gameObject);
             hasLaughed = true;
-            Debug.Log(">> Scavenger laughed!");
+            Debug.Log(">> Scavenger laughed at you!");
         }
     }
 
-    // New: Check and count ticks across all clouds
     public bool CanApplyTick()
     {
         if (ticksUsed < totalTickLimit)
