@@ -1,15 +1,18 @@
 using UnityEngine;
-using Cinemachine; // optional depending on version
+using Cinemachine;
 
 public class Rock : MonoBehaviour
 {
+    [Header("FX")]
     [SerializeField] float shakeModifier = 10f;
     [SerializeField] ParticleSystem collisionParticleSystem;
-    [SerializeField] AudioSource collisionSound;
+    [SerializeField] AK.Wwise.Event collisionSound;
+
+    [Header("Gameplay")]
+    [SerializeField] public float speedPenalty = -5f;
 
     CinemachineImpulseSource cinemachineImpulseSource;
-
-    float collisionTimer = 0f;
+    [SerializeField] float collisionTimer = 1f;
 
     void Awake()
     {
@@ -23,27 +26,35 @@ public class Rock : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (collisionTimer < 0.1f) return; // Prevent multiple collisions within a short time frame
+        if (collisionTimer < 0.1f) return;
 
         FireImpulse(other);
         CollisionFX(other);
-        collisionTimer = 0f; // Reset the timer after handling the collision
+        collisionTimer = 0f;
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            LevelGenerator levelGenerator = FindObjectOfType<LevelGenerator>();
+            if (levelGenerator != null)
+            {
+                levelGenerator.ChangeChunkMoveSpeed(speedPenalty);
+                Debug.Log($"Rock hit: {speedPenalty} speed penalty applied.");
+            }
+        }
     }
 
     void FireImpulse(Collision other)
     {
-        // Distance between the rock and the camera, to calculate the impulse strength
         float distance = Vector3.Distance(other.transform.position, Camera.main.transform.position);
-        float shakeIntensity = (1f / distance) * shakeModifier; // Adjust the intensity based on distance
-        shakeIntensity = Mathf.Min(shakeIntensity, 1f); // Cap the intensity to a maximum value
-        cinemachineImpulseSource.GenerateImpulse(shakeIntensity); // Generate the impulse with the calculated intensity
+        float shakeIntensity = Mathf.Min((1f / distance) * shakeModifier, 1f);
+        cinemachineImpulseSource.GenerateImpulse(shakeIntensity);
     }
 
     void CollisionFX(Collision other)
     {
-        ContactPoint contactPoint = other.GetContact(0); // Get the first contact point of the collision;
-        collisionParticleSystem.transform.position = contactPoint.point; //shifts the effect to the contact point of the collision
-        collisionParticleSystem.Play(); //plays the particle system at the contact point
-        collisionSound.Play(); //plays the collision sound effect
+        ContactPoint contactPoint = other.GetContact(0);
+        collisionParticleSystem.transform.position = contactPoint.point;
+        collisionParticleSystem.Play();
+        collisionSound?.Post(gameObject);
     }
 }

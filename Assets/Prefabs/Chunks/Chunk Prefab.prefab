@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7781224161935155626}
   - component: {fileID: 8014198570843953742}
   - component: {fileID: 1611658636640823341}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8178769157134445940}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9208749668435719423}
   - component: {fileID: -8751167218127084578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chunk Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -189,9 +189,14 @@ MonoBehaviour:
   fencePrefab: {fileID: 6297842970770166691, guid: 38e709942529f0a4b913c9f9ea0eafe6, type: 3}
   potionPrefab: {fileID: 4222040642567699969, guid: 7f0d6e18876efdf4499afe24677292b8, type: 3}
   coinPrefab: {fileID: 6208463163041641379, guid: 0975f39918bd9ed42bc3d308f486521d, type: 3}
-  potionSpawnChance: 0.3
+  bearTrapPrefab: {fileID: 6297842970770166691, guid: d278a6adc42aa2f409174c43308efddb, type: 3}
+  robberPrefab: {fileID: 3261182117693004777, guid: fce3cb8453779a04d88c1eb2e9d274dd, type: 3}
+  scavengerPrefab: {fileID: 874129175763763846, guid: 866ce5efcddcaea4994c20c14e2902da, type: 3}
+  potionSpawnChance: 0.2
   coinSpawnChance: 0.5
   coinSeperationLength: 2
+  robberSpawnThreshold: 250
+  skipSpawnUntilChunk: 1
   lanes:
   - -3
   - 0
@@ -211,6 +216,10 @@ PrefabInstance:
     - target: {fileID: 8323548542857262157, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_Name
       value: Path_Cobblestone_Env_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323548542857262157, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8703487618186899191, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -330,6 +339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coping_Wall_Bldg_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6694550358563747761, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -4173159601668770673, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
     m_RemovedGameObjects: []
@@ -385,6 +398,10 @@ PrefabInstance:
     - target: {fileID: 8323548542857262157, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_Name
       value: Path_Cobblestone_Env_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323548542857262157, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8703487618186899191, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -503,6 +520,10 @@ PrefabInstance:
     - target: {fileID: 6694550358563747761, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
       propertyPath: m_Name
       value: Coping_Wall_Bldg_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694550358563747761, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -4173159601668770673, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}

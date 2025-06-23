@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor.EditorTools;
@@ -11,6 +12,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] GameObject checkPointChunkPrefab;
     [SerializeField] Transform chunkParent; // Parent object for the chunks
     [SerializeField] ScoreManager scoreManager; // Reference to the ScoreManager script
+    [SerializeField] GameManager gameManager;
 
     [Header("Level Settings")]
     [Tooltip("The number of chunks to spawn at the start of the game.")]
@@ -26,6 +28,7 @@ public class LevelGenerator : MonoBehaviour
 
     List<GameObject> chunks = new List<GameObject>();
     int chunksSpawned = 0;
+    private bool isPaused = false;
 
 
     void Start()
@@ -78,7 +81,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject newChunkGO = Instantiate(chunkToSpawn, chunkSpawnPosition, Quaternion.identity, chunkParent);
         chunks.Add(newChunkGO); // expands the list one item at a time.
         Chunk newChunk = newChunkGO.GetComponent<Chunk>();
-        newChunk.Init(this, scoreManager);
+        newChunk.Init(this, scoreManager, gameManager, chunksSpawned);
         chunksSpawned++;
     }
 
@@ -117,6 +120,8 @@ public class LevelGenerator : MonoBehaviour
 
     void MoveChunks()
     {
+        if (isPaused) return;
+
         for (int i = 0; i < chunks.Count; i++)
         {
             if (chunks[i] != null)
@@ -134,6 +139,23 @@ public class LevelGenerator : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void PauseLevel(float duration)
+    {
+        StartCoroutine(PauseRoutine(duration));
+    }
+
+    private IEnumerator PauseRoutine(float duration)
+    {
+        isPaused = true;
+        yield return new WaitForSeconds(duration);
+        isPaused = false;
+    }
+
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
     }
 }
 

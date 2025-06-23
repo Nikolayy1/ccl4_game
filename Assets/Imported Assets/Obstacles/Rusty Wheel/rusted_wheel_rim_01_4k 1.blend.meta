@@ -3,7 +3,12 @@ guid: baaa414d2206d6244b7ab9a4773690ac
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rusted_wheel_rim_01
+    second: {fileID: 2100000, guid: bb9bdaadb75c31e46be46084a7ab2874, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

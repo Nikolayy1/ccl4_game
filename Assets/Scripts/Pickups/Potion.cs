@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Potion : Pickup
 {
+    [Header("Gameplay")]
     [SerializeField] float manipulateMoveSpeedAmount = 3f;
+    [Header("FX")]
+    [SerializeField] AK.Wwise.Event pickupSound;  // Wwise audio event
 
     LevelGenerator levelGenerator;
 
@@ -17,5 +20,9 @@ public class Potion : Pickup
     protected override void OnPickup()
     {
         levelGenerator.ChangeChunkMoveSpeed(manipulateMoveSpeedAmount);
+        // Wwise sound event
+        pickupSound?.Post(gameObject);
+        // Register potion pickup globally
+        PotionTracker.Instance?.RegisterPotionPickup();
     }
 }

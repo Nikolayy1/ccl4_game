@@ -1,0 +1,38 @@
+Event	ID	Name			Wwise Object Path	Notes
+	63471576	Play_anvil			\Default Work Unit\Play_anvil	
+	219250592	Play_Boulder_Smash			\Default Work Unit\Play_Boulder_Smash	
+	745966549	Play_augustus			\Default Work Unit\Play_augustus	
+	1059076725	Play_toilet			\Default Work Unit\Play_toilet	
+	1238619421	Play_goblin_laugh			\Default Work Unit\Play_goblin_laugh	
+	1408915754	Play_barrel			\Default Work Unit\Play_barrel	
+	1557486083	Play_metal_crash			\Default Work Unit\Play_metal_crash	
+	1786139419	Play_Facing_Your_Nemesis			\Default Work Unit\Play_Facing_Your_Nemesis	
+	2512266768	Play_goblin_stumble			\Default Work Unit\Play_goblin_stumble	
+	2568488193	Play_stove			\Default Work Unit\Play_stove	
+	2587316710	Play_robber			\Default Work Unit\Play_robber	
+	2704972850	Play_bear_trap			\Default Work Unit\Play_bear_trap	
+	2858965315	Play_fire_breath			\Default Work Unit\Play_fire_breath	
+	3351331666	Play_cage			\Default Work Unit\Play_cage	
+	4142890516	Play_chainsaw			\Default Work Unit\Play_chainsaw	
+	4170521540	Play_goblin_eat			\Default Work Unit\Play_goblin_eat	
+	4196543958	Play_coin_collect			\Default Work Unit\Play_coin_collect	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	88464631	goblin_laugh	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\F9\{F94DF977-EB04-01FF-26F5-A0C145011557}.wem		\Actor-Mixer Hierarchy\Default Work Unit\goblin_laugh		289708
+	94536348	cage	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\FE\{FEE7236F-6C72-1AF9-8823-FF0F4CC09452}.wem		\Actor-Mixer Hierarchy\Default Work Unit\cage		183328
+	201437110	barrel	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\B9\{B94C2F34-D7B1-AEF2-25EC-BAA1FD9E54BA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\barrel		59672
+	256492698	coin_collect	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\1E\{1E50C488-B62A-CDD4-6909-DE896D1A7166}.wem		\Actor-Mixer Hierarchy\Default Work Unit\coin_collect		68224
+	287287040	fire_breath	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\11\{116BA16B-1C6E-A7C8-6EB3-163C54BA21C8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\fire_breath		243978
+	324396594	toilet	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\20\{20031252-C9E9-CCD7-382D-FA0AE0780005}.wem		\Actor-Mixer Hierarchy\Default Work Unit\toilet		703876
+	365875068	goblin_stumble	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\CA\{CA4F0E7F-419C-13DE-3A45-79EDDB9A5C71}.wem		\Actor-Mixer Hierarchy\Default Work Unit\goblin_stumble		123696
+	607970589	Boulder Smash	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\B4\{B46A0B8F-940D-AB47-0661-35993BCE53DC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boulder Smash		240448
+	614752507	bear_trap	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\B9\{B9EB0401-7CA3-9768-74F1-544CDA30BD2F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\bear_trap		148732
+	637275036	anvil	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\27\{27F36369-7FB5-1F5C-2AF9-E593C1BE5ED7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\anvil		51808
+	661411155	metal_crash	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\0D\{0D108D28-B81D-602F-4652-F89EEA35E4FD}.wem		\Actor-Mixer Hierarchy\Default Work Unit\metal_crash		135496
+	709455778	Facing_Your_Nemesis	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\EA\{EA072A80-0E98-DB88-9F62-392B9414D773}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Facing_Your_Nemesis		41368660
+	770572895	stove	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\14\{140E649C-EBC0-E52A-9F29-C954EB58005E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\stove		76002
+	852864816	augustus	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\56\{56E4E0E1-8900-8FCD-0CD9-E9CE348AE765}.wem		\Actor-Mixer Hierarchy\Default Work Unit\augustus		74136
+	914248540	chainsaw	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\5A\{5A83E69F-CDC9-8AB3-A240-3507613A099A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\chainsaw		1351844
+	1036550998	goblin_eat	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\E3\{E3ECFB18-6708-0398-288A-F68B6F575E06}.wem		\Actor-Mixer Hierarchy\Default Work Unit\goblin_eat		44584
+	1040128361	robber	C:\school\Semester_4\ccl4\ccl4_game\ccl4_game_WwiseProject\.cache\61\{610DCFE6-5E9C-9006-24BB-B171282B949C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\robber		138838
+
