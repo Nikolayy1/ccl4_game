@@ -37,23 +37,29 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
   The goblin runs forward automatically, and the player can switch between left, center, and right lanes to dodge hazards or collect items.
 
 - **Shiny Bit (Coin) System**  
-  Collectible coins that increase score. Every 250 coins triggers the Robber NPC event.
+  Collectible coins that increase score & extend a bit of your game time. Every 250 coins triggers the RobberNPC event.
 
 - **Magic Mushroom Potions**  
-  Pickups that grant a temporary speed boost. Every 5 potions spawn a Scavenger NPC.
+  Pickups that grant a speed boost. Yet, every 5 potions spawn a ScavengerNPC.
 
 - **Custom NPCs**  
-  - **Robber Goblin**: Immobilizes player and steals 25% of current score  
-  - **Masked Scavenger**: Breathes vomit fire on a lane, applying stackable speed debuff
+  - **Robber Goblin**: Immobilizes player and steals 25% of current score, also applies a basic speed penalty  
+  - **Masked Scavenger**: Breathes vomit fire on a lane, applying a stackable speed penalty
 
-- **Procedural Chunk System**  
+- **Procedural Terrain System**  
   Endless generation of terrain chunks, each with randomized obstacles, coins, and traps
+
+  - **Checkpoint System**  
+  Special chunks appear every eight segments. When crossed, they add bonus time to the player's remaining game time and reduce the flying obstacle spawn interval, subtly increasing difficulty as the run progresses.
+
+- **Flying Obstacle System**
+  Random junk objects like barrels, tires, and toilets are spawned midair and slide horizontally across the screen. These obstacles are activated during chunk generation and move under diagonal gravity or custom physics, forcing players to react quickly or switch lanes   to avoid impact.
 
 - **Wwise Spatial Audio**  
   Positional sound for coins, traps, NPCs, and background music, fully integrated using Wwise
 
-- **Traps & Hazards**  
-  Bear traps, obstacles, and vomit fire zones slow or affect the player
+- **Road Traps & Hazards**  
+  Bear traps, rusty tire trip hazards, and vomit fire zones slow the player, adding additional difficulty.
 
 - **Custom 3D Models & Animations**  
   Original character, enemies, and props like barrels, traps, and coins — all modeled and rigged in Blender
@@ -63,7 +69,6 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 
 - **Game State Management**  
   StateManager that tracks the score, storing it in the Credits Scene 
-
 
 
 ## System Design
