@@ -49,7 +49,7 @@ The goal: stay alive, dodge hazards, and collect Shiny Bits to grow your fame an
 - **Procedural Terrain System**  
   Endless generation of terrain chunks, each with randomized obstacles, coins, and traps
 
-  - **Checkpoint System**  
+- **Checkpoint System**  
   Special chunks appear every eight segments. When crossed, they add bonus time to the player's remaining game time and reduce the flying obstacle spawn interval, subtly increasing difficulty as the run progresses.
 
 - **Flying Obstacle System**
